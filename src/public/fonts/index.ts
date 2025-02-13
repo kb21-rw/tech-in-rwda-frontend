@@ -26,7 +26,7 @@ export const roboto = Roboto({
   subsets: ["latin"],
   weight: ["400", "700"],
   display: "swap",
-  variable: "--font-arvo",
+  variable: "--font-roboto",
 });
 
 export const avenir = localFont({
