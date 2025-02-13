@@ -1,4 +1,4 @@
-import { arvo, avenir, comfortaa, mulish, roboto } from "@/public/fonts";
+import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
 import "./globals.css";
 
 export default function RootLayout({
