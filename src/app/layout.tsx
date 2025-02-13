@@ -1,6 +1,6 @@
 import { avenir } from "@/public/fonts";
 import "./globals.css";
-import { Comfortaa, Mulish, Arvo } from "next/font/google";
+import { Comfortaa, Mulish, Arvo, Roboto } from "next/font/google";
 
 const comfortaa = Comfortaa({
   subsets: ["latin"],
@@ -23,6 +23,13 @@ const arvo = Arvo({
   variable: "--font-arvo",
 });
 
+const roboto = Roboto({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+  variable: "--font-arvo",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -31,7 +38,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable}`}
+      className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable}`}
     >
       <body>{children}</body>
     </html>
