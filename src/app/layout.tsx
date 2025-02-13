@@ -9,7 +9,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable}`}
+      className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
       <body>{children}</body>
     </html>
