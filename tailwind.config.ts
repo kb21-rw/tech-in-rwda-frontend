@@ -8,9 +8,15 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        avenir: ["Avenir", "sans-serif"],
+        comfortaa: ["comfortaa", "sans-serif"],
+        mulish: ["mulish", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#13446B",
+        "gray-150": "#757575",
+        "blue-150": "#1A85C7",
       },
     },
   },
