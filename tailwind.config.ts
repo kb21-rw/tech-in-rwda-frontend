@@ -8,9 +8,17 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        avenir: ["Avenir", "sans-serif"],
+        comfortaa: ["comfortaa", "sans-serif"],
+        mulish: ["mulish", "sans-serif"],
+        arvo: ["arvo", "sans-serif"],
+        roboto: ["roboto", "sans-serif"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        "blue-150": "#13446B",
+        primary: "#757575",
+        secondary: "#1A85C7",
       },
     },
   },
