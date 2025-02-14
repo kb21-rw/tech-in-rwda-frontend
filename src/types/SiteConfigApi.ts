@@ -9,30 +9,6 @@ export type Footer = {
   };
 };
 
-export type ApiResponse = {
-  data: {
-    id: number;
-    attributes: {
-      createdAt: string;
-      updatedAt: string;
-      publishedAt: string;
-      locale: string;
-      logo: Image;
-      menu: MenuItem[];
-      navbar: {
-        id: number;
-        logoText: {
-          id: number;
-          text: string;
-          url: string;
-        };
-      };
-      footer?: Footer;
-    };
-  };
-  meta?: Record<string, unknown>;
-};
-
 export type MenuItem = {
   id: number;
   text: string;
