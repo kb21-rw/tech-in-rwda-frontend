@@ -8,7 +8,7 @@ const Navbar = ({ menu, logo }: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col px-10 lg:px-[108px] py-6">
+    <nav className="flex flex-col px-10 lg:px-24 py-6">
       <div className="hidden lg:flex items-center justify-between w-full">
         <Logo url={logo.data.attributes.url} text={logo.data.attributes.text} />
         <MenuItems menu={menu} />
