@@ -15,7 +15,7 @@ export const Logo = ({ url, text }: { url: string; text: string }) => (
 );
 
 export const MenuItems = ({ menu }: { menu: NavbarProps["menu"] }) => (
-  <div className="flex flex-col lg:flex-row gap-6 font-roboto text-lg font-normal">
+  <div className="flex flex-col lg:flex-row gap-6 font-roboto text-[28px] lg:text-lg font-normal">
     {menu?.map((item, index) => (
       <NavbarCard key={index} {...item} />
     ))}
