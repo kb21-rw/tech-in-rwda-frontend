@@ -3,7 +3,6 @@ import navbarData from "../../public/data/siteConfig.json";
 
 export default function Home() {
   const { data } = navbarData;
-  console.log("data", data);
   return (
     <>
       <Navbar
