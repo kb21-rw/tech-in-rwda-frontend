@@ -3,7 +3,6 @@ import HamburgerMenu from "@/assets/HamburgerMenu";
 import NavbarCard from "../Card";
 import Link from "next/link";
 import Image from "next/image";
-import { usePathname } from "next/navigation";
 import { NavbarProps } from "@/types/SiteConfigApi";
 
 export const Logo = ({ url, text }: { url: string; text: string }) => (
@@ -23,23 +22,22 @@ export const MenuItems = ({
   isOpen: boolean;
 }) => {
   const { menu } = data.attributes;
-  const pathname = usePathname();
 
   return (
     <div
       className={`${
-        isOpen ? "flex flex-col items-center justify-center py-16.75" : "hidden"
-      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize`}
+        isOpen ? "flex py-16.75" : "hidden"
+      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize flex-col items-center justify-center`}
     >
-      {menu.map((item) => (
-        <NavbarCard
-          key={item.id}
-          {...item}
-          className={`hover hover:text-black ${
-            pathname === item.url ? "text-black" : "text-primary"
-          }`}
-        />
-      ))}
+      {menu.map((item) => {
+        return (
+          <NavbarCard
+            key={item.id}
+            {...item}
+            className="hover hover:text-black "
+          />
+        );
+      })}
     </div>
   );
 };
