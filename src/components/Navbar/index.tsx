@@ -4,7 +4,8 @@ import { NavbarProps } from "@/types/SiteConfigApi";
 import { useState } from "react";
 import { Logo, MenuIcon, MenuItems } from "./MenuDropdown";
 
-const Navbar = ({ menu, logo }: NavbarProps) => {
+const Navbar = (data: any) => {
+  const { menu, logo } = data;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
