@@ -4,7 +4,6 @@ import { usePathname } from "next/navigation";
 
 interface NavbarCardProps extends MenuItem {
   className?: string;
-  onClick?: (event: React.MouseEvent) => void;
 }
 
 const NavbarCard: React.FC<NavbarCardProps> = ({ url, text, className }) => {
@@ -13,9 +12,9 @@ const NavbarCard: React.FC<NavbarCardProps> = ({ url, text, className }) => {
 
   return (
     <div
-      className={`text-2.5xl lg:text-lg font-normal text-primary lg:text-black ${
-        isActive ? "text-black font-bold" : "text-gray-primary"
-      } ${className}`}
+      className={`${
+        isActive ? "text-black font-bold" : "text-primary lg:text-black"
+      } text-2.5xl lg:text-lg font-normal  ${className}`}
     >
       <Link href={url}>{text}</Link>
     </div>
