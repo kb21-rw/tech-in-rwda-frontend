@@ -3,7 +3,6 @@ import Link from "next/link";
 
 interface NavbarCardProps extends MenuItem {
   className?: string;
-  ref?: any;
 }
 
 const NavbarCard: React.FC<NavbarCardProps> = ({ url, text, className }) => {
