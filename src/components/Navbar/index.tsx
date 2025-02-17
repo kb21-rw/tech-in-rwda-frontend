@@ -10,8 +10,8 @@ const Navbar = (data: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="h-screen lg:h-full z-10 content-wrapper">
-      <div className="flex flex-col md:flex-row justify-between py-6">
+    <nav className="h-screen lg:h-full z-10">
+      <div className="flex flex-col lg:flex-row justify-between py-6">
         <div className="flex items-center justify-between">
           <Logo url={url} text={text} />
           <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />

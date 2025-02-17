@@ -40,7 +40,7 @@ export const MenuIcon = ({
   isOpen: boolean;
   toggle: () => void;
 }) => (
-  <button onClick={toggle} className="text-black block md:hidden">
+  <button onClick={toggle} className="text-black block lg:hidden">
     {isOpen ? <CloseIcon /> : <HamburgerMenu />}
   </button>
 );

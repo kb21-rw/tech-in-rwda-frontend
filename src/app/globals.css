@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-.content-wrapper {
-    @apply 2xl:max-w-[1876px] xl:max-w-[1224px] lg:max-w-[1024px] md:max-w-[354px] mx-auto
-}
+
+body {
+    @apply max-w-screen-2xl mx-auto lg:px-27 px-7.5
+
+} 
