@@ -2,3 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
+.content-wrapper {
+    @apply lg:max-w-[1224px] md:max-w-[354px]
+}
