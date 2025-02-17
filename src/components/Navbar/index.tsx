@@ -1,30 +1,22 @@
 "use client";
 
-import { NavbarProps } from "@/types/SiteConfigApi";
 import { useState } from "react";
 import { Logo, MenuIcon, MenuItems } from "./MenuDropdown";
+import { NavbarProps } from "@/types/SiteConfigApi";
 
-const Navbar = (data: any) => {
-  const { menu, logo } = data;
+const Navbar = (data: NavbarProps) => {
+  const { logo, menu } = data.attributes;
+  const { url, text } = logo.data.attributes;
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col px-7 lg:px-24 py-6">
-      <div className="hidden lg:flex items-center justify-between w-full">
-        <Logo url={logo.data.attributes.url} text={logo.data.attributes.text} />
-        <MenuItems menu={menu} />
-      </div>
-
-      <div className="flex lg:hidden items-center justify-between w-full px-4 py-4">
-        <Logo url={logo.data.attributes.url} text={""} />
+    <nav className="flex flex-col md:flex-row px-7 border justify-between lg:px-24 py-6">
+      <div className="flex items-center justify-between">
+        <Logo url={url} text={text} />
         <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
       </div>
 
-      {isOpen && (
-        <div className="lg:hidden py-4">
-          <MenuItems menu={menu} />
-        </div>
-      )}
+      <MenuItems menu={menu} isOpen={isOpen} />
     </nav>
   );
 };

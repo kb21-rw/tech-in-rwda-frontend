@@ -5,11 +5,7 @@ export default function Home() {
   const { data } = navbarData;
   return (
     <>
-      <Navbar
-        menu={navbarData.data.attributes.menu}
-        logo={navbarData.data.attributes.logo}
-        {...data}
-      />
+      <Navbar {...data} />
     </>
   );
 }

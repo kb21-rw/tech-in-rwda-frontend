@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const NavbarCard = ({ url, text }: MenuItem) => {
   return (
-    <div className="flex justify-center items-center px-4 py-2">
+    <div className={``}>
       <Link href={url}>{text}</Link>
     </div>
   );

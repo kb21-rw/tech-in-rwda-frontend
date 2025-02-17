@@ -13,7 +13,7 @@
               "name": "tech in rwanda.svg",
               "text": "TECH IN RWANDA",
               "alternativeText": null,
-              "url": "/uploads/Vector (4).svg",
+              "url": "/uploads/logo-image.png",
               "width": 146,
               "height": 45
             }
@@ -23,7 +23,7 @@
           {
             "id": 1,
             "text": "About",
-            "url": "/about"
+            "url": "/"
             
           },
           {
