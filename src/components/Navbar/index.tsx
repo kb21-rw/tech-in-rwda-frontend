@@ -17,7 +17,7 @@ const Navbar = (data: NavbarProps) => {
   }, [pathname]);
 
   return (
-    <nav className="h-screen lg:h-full z-10">
+    <nav className="z-10 relative">
       <div className="flex flex-col lg:flex-row justify-between py-6">
         <div className="flex items-center justify-between">
           <Logo url={url} text={text} />
