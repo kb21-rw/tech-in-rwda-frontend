@@ -14,7 +14,7 @@ const NavbarCard: React.FC<NavbarCardProps> = ({ url, text, className }) => {
     <div
       className={`${
         isActive ? "text-black font-bold" : "text-primary lg:text-black"
-      } text-2.5xl lg:text-lg font-normal  ${className}`}
+      } text-2.5xl lg:text-lg font-normal ${className}`}
     >
       <Link href={url}>{text}</Link>
     </div>
