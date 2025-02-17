@@ -20,7 +20,7 @@ export const MenuItems = ({ menu, isOpen }: { menu: any; isOpen: boolean }) => {
     <div
       className={`${
         isOpen ? "flex flex-col items-center justify-center py-16.75" : "hidden"
-      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-2.5xl lg:text-lg font-normal text-primary lg:text-black border`}
+      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 `}
     >
       {menu.map((item: any) => (
         <NavbarCard

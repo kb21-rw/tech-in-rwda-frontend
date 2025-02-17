@@ -10,13 +10,15 @@ const Navbar = (data: NavbarProps) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="flex flex-col md:flex-row px-7 border justify-between lg:px-24 py-6">
-      <div className="flex items-center justify-between">
-        <Logo url={url} text={text} />
-        <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
-      </div>
+    <nav className="h-screen lg:h-full z-10">
+      <div className="flex flex-col md:flex-row px-7 justify-between lg:px-24 py-6 ">
+        <div className="flex items-center justify-between">
+          <Logo url={url} text={text} />
+          <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
+        </div>
 
-      <MenuItems menu={menu} isOpen={isOpen} />
+        <MenuItems menu={menu} isOpen={isOpen} />
+      </div>
     </nav>
   );
 };
