@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 .content-wrapper {
-    @apply lg:max-w-[1224px] md:max-w-[354px]
+    @apply 2xl:max-w-[1876px] xl:max-w-[1224px] lg:max-w-[1024px] md:max-w-[354px] mx-auto
 }
