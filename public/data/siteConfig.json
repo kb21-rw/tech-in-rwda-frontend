@@ -1,0 +1,61 @@
+{
+    "data": {
+      "id": 1,
+      "attributes": {
+        "createdAt": "2025-02-18T17:20:59.083Z",
+        "updatedAt": "2025-02-19T07:39:23.587Z",
+        "publishedAt": "2025-02-19T07:39:23.582Z",
+        "locale": "en",
+        "logo": {
+          "data": {
+            "id": 1,
+            "attributes": {
+              "name": "tech in rwanda.svg",
+              "text": "TECH IN RWANDA",
+              "alternativeText": null,
+              "url": "/uploads/Vector (4).svg",
+              "width": 146,
+              "height": 45
+            }
+          }
+        },
+        "menu": [
+          {
+            "id": 1,
+            "text": "About",
+            "url": "/about"
+            
+          },
+          {
+            "id": 2,
+            "text": "Projects",
+            "url": "/products"
+          },
+          {
+            "id": 3,
+            "text": "German Rwandan Tech Network",
+            "url": "/members"
+          },
+          {
+            "id": 4,
+            "text": "contact",
+            "url": "/contact"
+           
+          }
+        ],
+        "navbar": {
+          "id": 1
+        },
+        "footer": {
+          "id": 1,
+          "copyrightText": "© 2024 Tech in Rwanda e.v",
+          "menu": {
+            "text": "Imprint",
+            "url": "/imprint"
+          }
+        }
+      }
+    },
+    "meta": {}
+  }
+  

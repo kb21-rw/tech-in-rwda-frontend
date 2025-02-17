@@ -1,3 +1,11 @@
+import data from "../../public/data/siteConfig.json";
+import Footer from "@/components/Footer";
+
 export default function Home() {
-  return <h1 className="font-avenir">welcome to Tech In Rwanda</h1>;
+  const { footer } = data.data.attributes;
+  return (
+    <div>
+      <Footer {...footer} />
+    </div>
+  );
 }
