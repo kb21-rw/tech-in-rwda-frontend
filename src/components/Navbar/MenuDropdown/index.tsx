@@ -27,16 +27,10 @@ export const MenuItems = ({
     <div
       className={`${
         isOpen ? "flex py-16.75" : "hidden"
-      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize flex-col items-center justify-center`}
+      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize flex-col items-center justify-center hover:text-black`}
     >
       {menu.map((item) => {
-        return (
-          <NavbarCard
-            key={item.id}
-            {...item}
-            className="hover hover:text-black "
-          />
-        );
+        return <NavbarCard key={item.id} {...item} />;
       })}
     </div>
   );
