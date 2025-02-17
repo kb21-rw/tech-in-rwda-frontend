@@ -5,7 +5,7 @@ import { Logo, MenuIcon, MenuItems } from "./MenuDropdown";
 import { NavbarProps } from "@/types/SiteConfigApi";
 
 const Navbar = (data: NavbarProps) => {
-  const { logo, menu } = data.attributes;
+  const { logo } = data.attributes;
   const { url, text } = logo.data.attributes;
   const [isOpen, setIsOpen] = useState(false);
 
@@ -17,7 +17,7 @@ const Navbar = (data: NavbarProps) => {
           <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
         </div>
 
-        <MenuItems menu={menu} isOpen={isOpen} />
+        <MenuItems data={data} isOpen={isOpen} />
       </div>
     </nav>
   );
