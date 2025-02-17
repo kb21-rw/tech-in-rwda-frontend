@@ -18,7 +18,7 @@ const Navbar = (data: NavbarProps) => {
 
   return (
     <nav className=" z-10 relative">
-      <div className="flex flex-col lg:flex-row justify-between py-6">
+      <div className="flex flex-col lg:flex-row justify-between py-10">
         <div className="flex items-center justify-between">
           <Logo url={url} text={text} />
           <MenuIcon isOpen={isOpen} toggle={() => setIsOpen(!isOpen)} />
