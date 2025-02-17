@@ -3,11 +3,18 @@
 import { useState } from "react";
 import { Logo, MenuIcon, MenuItems } from "./MenuDropdown";
 import { NavbarProps } from "@/types/SiteConfigApi";
+import { useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 const Navbar = (data: NavbarProps) => {
   const { logo } = data.attributes;
   const { url, text } = logo.data.attributes;
   const [isOpen, setIsOpen] = useState(false);
+  const pathname = usePathname();
+
+  useEffect(() => {
+    setIsOpen(false);
+  }, [pathname]);
 
   return (
     <nav className="h-screen lg:h-full z-10">

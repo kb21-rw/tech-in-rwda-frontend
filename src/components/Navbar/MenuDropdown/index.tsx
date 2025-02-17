@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { NavbarProps } from "@/types/SiteConfigApi";
+import { useEffect, useRef } from "react";
 
 export const Logo = ({ url, text }: { url: string; text: string }) => (
   <Link href={url} className=" flex items-center gap-4">
@@ -24,17 +25,28 @@ export const MenuItems = ({
 }) => {
   const { menu } = data.attributes;
   const pathname = usePathname();
+  const activeRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (activeRef.current) {
+      activeRef.current.focus();
+    }
+  }, [pathname]);
+
   return (
     <div
       className={`${
         isOpen ? "flex flex-col items-center justify-center py-16.75" : "hidden"
-      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center`}
+      } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize`}
     >
       {menu.map((item) => (
         <NavbarCard
           key={item.id}
           {...item}
-          className={`${pathname === item.url ? "text-black" : "text-primary"}`}
+          className={`hover hover:text-black ${
+            pathname === item.url ? "text-black" : "text-primary"
+          }`}
+          ref={pathname === item.url ? activeRef : null}
         />
       ))}
     </div>
