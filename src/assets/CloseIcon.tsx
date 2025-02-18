@@ -2,7 +2,7 @@ import React from "react";
 
 const CloseIcon = () => {
   return (
-    <div>
+    <div className="w-20">
       <svg
         width="30"
         height="30"

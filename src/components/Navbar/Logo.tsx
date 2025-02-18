@@ -7,7 +7,7 @@ export const Logo = ({
   mobileLogo,
 }: Omit<HeaderProps, "links">) => {
   return (
-    <Link href={"/"} className="flex items-center gap-4">
+    <Link href="/">
       <picture>
         <source
           media="(max-width: 1020px)"

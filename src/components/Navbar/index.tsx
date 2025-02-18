@@ -15,7 +15,7 @@ const Navbar = (data: NavbarProps) => {
   };
 
   return (
-    <nav className={`z-10 ${isOpen && "z-40 bg-white fixed lg:static"}`}>
+    <nav className={` ${isOpen && " w-full z-40 bg-white fixed lg:static"}`}>
       <div className="flex flex-col lg:flex-row justify-between py-10">
         <div className="flex items-center justify-between">
           <Logo desktopLogo={desktopLogo} mobileLogo={mobileLogo} />
