@@ -20,6 +20,14 @@ export default {
         primary: "#757575",
         secondary: "#1A85C7",
       },
+      spacing: {
+        "6.75": "27px",
+        "7.5": "30px",
+        "11.25": "45px",
+      },
+      fontSize: {
+        15: "60px",
+      },
     },
   },
   plugins: [],
