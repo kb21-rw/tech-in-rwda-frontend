@@ -15,9 +15,12 @@ export type MenuItem = {
   url: string;
 };
 
+export type HeaderProps = {
+  links: MenuItem[];
+  desktopLogo: Image;
+  mobileLogo: Image;
+};
+
 export type NavbarProps = {
-  header: {
-    links: MenuItem[];
-    desktopLogo: Image;
-  };
+  header: HeaderProps;
 };

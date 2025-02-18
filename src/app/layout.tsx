@@ -3,12 +3,20 @@ import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
 import "./globals.css";
 import navbarData from "../../public/data/siteConfig.json";
 
+const { data } = navbarData;
+
+export const metadata = {
+  icons: {
+    icon: `${data.favicon[0].url}"`,
+  },
+};
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { data } = navbarData;
+  console.log("first", data);
   return (
     <html
       lang="en"
