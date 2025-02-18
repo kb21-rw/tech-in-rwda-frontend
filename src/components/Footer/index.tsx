@@ -16,7 +16,7 @@ const Footer = (footer: FooterProps) => {
       <h1>{copyrightText}</h1>
       <span className="hidden lg:block px-3">/</span>
 
-      <div>
+      <div className="capitalize">
         <Link href={menu.url}>{menu.text}</Link>
       </div>
     </div>
