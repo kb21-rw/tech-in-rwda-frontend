@@ -17,8 +17,12 @@ export default {
       },
       colors: {
         "blue-150": "#13446B",
+        "blue-250": "#0F446B",
         primary: "#757575",
         secondary: "#1A85C7",
+      },
+      fontSize: {
+        xxs: "10px",
       },
     },
   },
