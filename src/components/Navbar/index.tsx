@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Logo } from "./Menu/Logo";
+import { Logo } from "./Logo";
 import { MenuIcon } from "./Menu/Icon";
 import { NavbarProps } from "@/types/SiteConfigApi";
 import { MenuItems } from "./Menu/Items";
