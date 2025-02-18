@@ -11,7 +11,7 @@ export const MenuItems = ({
   isOpen: boolean;
   toggle: () => void;
 }) => {
-  const { menu } = data.attributes;
+  const { links } = data.header;
   const pathname = usePathname();
 
   return (
@@ -20,7 +20,7 @@ export const MenuItems = ({
         isOpen ? "flex pt-16.75 lg:pt-0" : "hidden"
       } lg:flex lg:flex-row font-roboto gap-7.5 lg:gap-12.5 text-center capitalize flex-col items-center justify-center hover:text-black`}
     >
-      {menu.map((item) => {
+      {links.map((item) => {
         return (
           <div
             onClick={() => toggle()}

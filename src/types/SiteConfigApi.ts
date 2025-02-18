@@ -16,8 +16,8 @@ export type MenuItem = {
 };
 
 export type NavbarProps = {
-  attributes: {
-    menu: MenuItem[];
-    logo: Image;
+  header: {
+    links: MenuItem[];
+    desktopLogo: Image;
   };
 };

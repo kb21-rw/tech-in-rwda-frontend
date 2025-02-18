@@ -7,8 +7,7 @@ import { NavbarProps } from "@/types/SiteConfigApi";
 import { MenuItems } from "./Menu/Items";
 
 const Navbar = (data: NavbarProps) => {
-  const { logo } = data.attributes;
-  const { url, text } = logo.data.attributes;
+  const { desktopLogo } = data.header;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
@@ -19,7 +18,7 @@ const Navbar = (data: NavbarProps) => {
     <nav className={`z-10 ${isOpen && "z-40 bg-white fixed lg:static"}`}>
       <div className="flex flex-col lg:flex-row justify-between py-10">
         <div className="flex items-center justify-between">
-          <Logo url={url} text={text} />
+          <Logo url={desktopLogo.url} />
           <MenuIcon isOpen={isOpen} toggle={() => toggle()} />
         </div>
 
