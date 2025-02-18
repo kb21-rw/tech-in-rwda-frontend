@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { HeaderProps } from "@/types/SiteConfigApi";
+import Image from "next/image";
 
 export const Logo = ({
   desktopLogo,
@@ -20,9 +21,9 @@ export const Logo = ({
           width={desktopLogo.width}
           height={desktopLogo.height}
         />
-        <img
+        <Image
           src={desktopLogo.url}
-          alt={desktopLogo.alt}
+          alt={desktopLogo.alt || ""}
           width={desktopLogo.width}
           height={desktopLogo.height}
         />
