@@ -7,7 +7,7 @@ const { data } = navbarData;
 
 export const metadata = {
   icons: {
-    icon: `${data.favicon[0].url}"`,
+    icon: `${data.favicon[0].url}`,
   },
 };
 
