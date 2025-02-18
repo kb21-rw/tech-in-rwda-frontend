@@ -1,6 +1,4 @@
-import React from "react";
-
-const Header = ({ description }: any) => {
+const Header = ({ description }: { description: string }) => {
   return (
     <div className="flex flex-col justify-center items-center py-6.75">
       <h1 className="font-avenir text-4xl lg:text-15">{description}</h1>
