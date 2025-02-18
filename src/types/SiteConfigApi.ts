@@ -1,12 +1,14 @@
 import { Image } from "./image";
 
+export type FooterMenus = {
+  text: string;
+  url: string;
+};
+
 export type Footer = {
   id: number;
   copyrightText: string;
-  menu: {
-    text: string;
-    url: string;
-  };
+  menu: FooterMenus;
 };
 
 export type MenuItem = {
