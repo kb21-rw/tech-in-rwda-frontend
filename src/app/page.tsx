@@ -5,7 +5,7 @@ export default function Home() {
   const { title } = headerData.data;
   return (
     <h1 className="font-avenir">
-      <Header description={title} />
+      <Header title={title} />
     </h1>
   );
 }

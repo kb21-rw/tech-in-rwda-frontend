@@ -24,6 +24,10 @@ export default {
         "6.75": "27px",
         "7.5": "30px",
         "11.25": "45px",
+        15: "60px",
+      },
+      lineHeight: {
+        "7.5": "30px",
       },
       fontSize: {
         15: "60px",
