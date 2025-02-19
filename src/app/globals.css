@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.content-wrapper {
+    @apply w-[85.5%] lg:w-[85%]  mx-auto
+} 

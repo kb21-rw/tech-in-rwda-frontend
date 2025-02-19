@@ -19,7 +19,7 @@
         "ext": ".svg",
         "mime": "image/svg+xml",
         "size": 11.02,
-        "url": "/uploads/logo_image_a496404fc4.svg",
+        "url": "/uploads/logo-image.png",
         "previewUrl": null,
         "provider": "local",
         "provider_metadata": null,
@@ -65,7 +65,7 @@
         "ext": ".svg",
         "mime": "image/svg+xml",
         "size": 11.02,
-        "url": "/uploads/logo_image_1_80bd1f3841.svg",
+        "url": "/uploads/logo-image.png",
         "previewUrl": null,
         "provider": "local",
         "provider_metadata": null,
@@ -86,7 +86,7 @@
         "ext": ".svg",
         "mime": "image/svg+xml",
         "size": 14.94,
-        "url": "/uploads/header_logo_b8ecd90069.svg",
+        "url": "/uploads/Logo .svg",
         "previewUrl": null,
         "provider": "local",
         "provider_metadata": null,
@@ -97,7 +97,8 @@
     },
     "footer": {
       "id": 4,
-      "copyright": "@2019, Tech in Ruanda e.V.",
+      "copyright": "@2019, Tech in Ruanda e.V.   /",
+
       "imprint": "Imprint",
       "imprintUrl": "/imprint"
     }

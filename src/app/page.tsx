@@ -1,3 +1,7 @@
 export default function Home() {
-  return <div>Welcome to tech in Rwanda project</div>;
+  return (
+    <>
+      <h1>Home page</h1>
+    </>
+  );
 }
