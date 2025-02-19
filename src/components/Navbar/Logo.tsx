@@ -13,7 +13,7 @@ export const Logo = ({ desktopLogo, mobileLogo }: Omit<Header, "links">) => {
           height={mobileLogo.height}
         />
         <source
-          media="(min-w.height} />: 600px)"
+          media="(max-width: 600px)"
           srcSet={desktopLogo.url}
           width={desktopLogo.width}
           height={desktopLogo.height}
