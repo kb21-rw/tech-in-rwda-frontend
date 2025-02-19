@@ -1,3 +1,11 @@
+import RichText from "@/components/ui/RichText";
+import { data } from "../../public/data/homePageData.json";
+
 export default function Home() {
-  return <h1 className="font-avenir">welcome to Tech In Rwanda</h1>;
+  const { description } = data;
+  return (
+    <div>
+      <RichText content={description} />
+    </div>
+  );
 }
