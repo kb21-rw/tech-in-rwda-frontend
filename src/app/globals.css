@@ -2,3 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.paragraph:nth-child(n+6) {
+    @apply -mb-4;
+}

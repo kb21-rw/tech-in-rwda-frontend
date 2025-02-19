@@ -27,7 +27,9 @@ const RichText = ({ content }: any) => {
           },
 
           paragraph: ({ children }) => (
-            <p className="pb-4 text-center lg:text-start">{children}</p>
+            <p className="pb-4 text-center lg:text-start paragraph">
+              {children}
+            </p>
           ),
           list: ({ children, format }) => {
             return (
