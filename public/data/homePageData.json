@@ -1,0 +1,227 @@
+{
+  "data": {
+    "id": 4,
+    "documentId": "lnugiltyr4f6rpby84kvbch2",
+    "createdAt": "2025-02-17T10:16:18.612Z",
+    "updatedAt": "2025-02-18T09:30:43.765Z",
+    "publishedAt": "2025-02-18T09:30:43.780Z",
+    "description": [
+      {
+        "type": "heading",
+        "level": 1,
+        "children": [
+          {
+            "text": "Welcome",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 2,
+        "children": [
+          {
+            "text": "Introduction",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "heading",
+        "level": 3,
+        "children": [
+          {
+            "text": "How are you doing?",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Tech in Ruanda e.V. is a German non-profit association dedicated to promoting the Rwandan tech-industry by",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "unordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "facilitating capacity building initiatives",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "supporting job creation projects in the IT-sector",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "informing the German public in general and the German tech-scene in particular about developments in",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "     the Rwandan IT-ecosystem",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "To read more about our capacity building and job creation projects, please refer to the page of the German Rwandan Tech Network. We initiated the German Rwandan Tech Network as a way to bring together the partners with whom we implement our projects and to offer a decentralized platform for tech-leaders from Rwanda and Germany to connect and develop cooperation initiatives of their own.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "To further our aim of informing the German public about the Rwandan IT-ecosystem we are currently developing a section of this website that will provide an overview of the main companies and initiatives of the Rwandan tech-scene. Furthermore, we are supporting a series of talks and presentations as well as media-articles about the Rwandan IT-ecosystem.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "All the participants",
+            "type": "text",
+            "underline": true
+          }
+        ]
+      },
+      {
+        "type": "list",
+        "format": "ordered",
+        "children": [
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Thierry",
+                "type": "text"
+              }
+            ]
+          },
+          {
+            "type": "list-item",
+            "children": [
+              {
+                "text": "Ntirandekkura",
+                "type": "text"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Here is the code ",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "function myFunction(p1, p2) {",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "  return p1 * p2;",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "code": true,
+            "text": "}\n\n",
+            "type": "text"
+          },
+          {
+            "text": "Click on this google link",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "title": "About Tech in Ruanda e.V."
+  },
+  "meta": {
+
+  }
+}
