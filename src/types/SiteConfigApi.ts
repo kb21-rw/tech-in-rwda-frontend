@@ -25,4 +25,11 @@ export type Header = {
 
 export type NavbarData = {
   header: Header;
+}
+
+export type FooterData = {
+  id?: number;
+  copyright: string;
+  imprint: string;
+  imprintUrl: string;
 };

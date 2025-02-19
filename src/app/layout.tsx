@@ -2,6 +2,8 @@ import Navbar from "@/components/Navbar";
 import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
 import "./globals.css";
 import navbarData from "../../public/data/siteConfig.json";
+import { data } from "../../public/data/siteConfig.json";
+import Footer from "@/components/Footer";
 
 const { data } = navbarData;
 
@@ -16,6 +18,7 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const { footer } = data;
   return (
     <html
       lang="en"
@@ -23,7 +26,7 @@ export default function RootLayout({
     >
       <body className="content-wrapper">
         <Navbar {...data} />
-        {children}
+        {children} <Footer {...footer} />
       </body>
     </html>
   );
