@@ -1,30 +1,22 @@
 import Link from "next/link";
-import { Header } from "@/types/SiteConfigApi";
 import Image from "next/image";
+import { Header } from "@/types/SiteConfigApi";
 
-export const Logo = ({ desktopLogo, mobileLogo }: Omit<Header, "links">) => {
+interface LogoProps extends Omit<Header, "links"> {
+  isOpen: boolean;
+}
+
+export const Logo = ({ desktopLogo, mobileLogo, isOpen }: LogoProps) => {
+  const logo = isOpen && window.innerWidth < 1024 ? mobileLogo : desktopLogo;
+
   return (
     <Link href="/">
-      <picture>
-        <source
-          media="(max-width: 1020px)"
-          srcSet={mobileLogo.url}
-          width={mobileLogo.width}
-          height={mobileLogo.height}
-        />
-        <source
-          media="(max-width: 600px)"
-          srcSet={desktopLogo.url}
-          width={desktopLogo.width}
-          height={desktopLogo.height}
-        />
-        <Image
-          src={desktopLogo.url}
-          alt={desktopLogo.alt || ""}
-          width={desktopLogo.width}
-          height={desktopLogo.height}
-        />
-      </picture>
+      <Image
+        src={logo.url}
+        alt={logo.alt || "Logo"}
+        width={logo.width}
+        height={logo.height}
+      />
     </Link>
   );
 };

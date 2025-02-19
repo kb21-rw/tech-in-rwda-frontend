@@ -3,6 +3,6 @@
 @tailwind utilities;
 
 
-body {
-    @apply max-w-screen-2xl mx-auto lg:px-27 px-7.5
+.content-wrapper {
+    @apply w-[85.5%] lg:w-[85%]  mx-auto
 } 

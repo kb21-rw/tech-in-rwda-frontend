@@ -21,6 +21,7 @@ export default {
         secondary: "#1A85C7",
       },
       spacing: {
+        "7.2": "7.246%",
         "7.5": "30px",
         "16.75": "67px",
         "12.5": "50px",

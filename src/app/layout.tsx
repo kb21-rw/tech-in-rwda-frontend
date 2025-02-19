@@ -21,7 +21,7 @@ export default function RootLayout({
       lang="en"
       className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
-      <body>
+      <body className="content-wrapper">
         <Navbar {...data} />
         {children}
       </body>
