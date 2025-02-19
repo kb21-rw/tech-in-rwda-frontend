@@ -17,12 +17,12 @@ export type MenuItem = {
   url: string;
 };
 
-export type HeaderProps = {
+export type Header = {
   links: MenuItem[];
   desktopLogo: Image;
   mobileLogo: Image;
 };
 
-export type NavbarProps = {
-  header: HeaderProps;
+export type NavbarData = {
+  header: Header;
 };

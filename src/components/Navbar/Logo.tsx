@@ -1,11 +1,8 @@
 import Link from "next/link";
-import { HeaderProps } from "@/types/SiteConfigApi";
+import { Header } from "@/types/SiteConfigApi";
 import Image from "next/image";
 
-export const Logo = ({
-  desktopLogo,
-  mobileLogo,
-}: Omit<HeaderProps, "links">) => {
+export const Logo = ({ desktopLogo, mobileLogo }: Omit<Header, "links">) => {
   return (
     <Link href="/">
       <picture>

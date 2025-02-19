@@ -1,4 +1,4 @@
-import { NavbarProps } from "@/types/SiteConfigApi";
+import { NavbarData } from "@/types/SiteConfigApi";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -7,7 +7,7 @@ export const MenuItems = ({
   isOpen,
   toggle,
 }: {
-  data: NavbarProps;
+  data: NavbarData;
   isOpen: boolean;
   toggle: () => void;
 }) => {
