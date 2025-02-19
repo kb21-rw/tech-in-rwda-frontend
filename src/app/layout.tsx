@@ -1,14 +1,14 @@
 import Footer from "@/components/Footer";
 import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
 import "./globals.css";
-import data from "../../public/data/siteConfig.json";
+import { data } from "../../public/data/siteConfig.json";
 
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const { footer } = data.data.attributes;
+  const { footer } = data;
   return (
     <html
       lang="en"
