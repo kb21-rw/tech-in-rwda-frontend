@@ -1,0 +1,108 @@
+{
+  "data": {
+    "id": 4,
+    "documentId": "ea5ebaymmaitdqke4s4xsdwo",
+    "createdAt": "2025-02-17T12:23:53.127Z",
+    "updatedAt": "2025-02-18T11:21:47.972Z",
+    "publishedAt": "2025-02-18T11:21:48.010Z",
+    "favicon": [
+      {
+        "id": 1,
+        "documentId": "gw51g4f1xg8l06tphc0i4xsp",
+        "name": "favebon.svg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 56,
+        "height": 56,
+        "formats": null,
+        "hash": "logo_image_a496404fc4",
+        "ext": ".svg",
+        "mime": "image/svg+xml",
+        "size": 11.02,
+        "url": "/uploads/logo_image_a496404fc4.svg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-02-17T12:17:54.315Z",
+        "updatedAt": "2025-02-17T12:21:22.342Z",
+        "publishedAt": "2025-02-17T12:17:54.316Z"
+      }
+    ],
+    "header": {
+      "id": 4,
+      "links": [
+        {
+          "id": 17,
+          "text": "About",
+          "url": "/about"
+        },
+        {
+          "id": 18,
+          "text": "Projects",
+          "url": "/projects"
+        },
+        {
+          "id": 19,
+          "text": "German Rwanda Tech Network",
+          "url": "/german-rwanda-tech-network"
+        },
+        {
+          "id": 20,
+          "text": "Contact",
+          "url": "/contact"
+        }
+      ],
+      "mobileLogo": {
+        "id": 19,
+        "documentId": "opizfcyc70ox2r78jbiqykb3",
+        "name": "mobile-logo.svg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 56,
+        "height": 56,
+        "formats": null,
+        "hash": "logo_image_1_80bd1f3841",
+        "ext": ".svg",
+        "mime": "image/svg+xml",
+        "size": 11.02,
+        "url": "/uploads/logo_image_1_80bd1f3841.svg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-02-18T11:21:11.700Z",
+        "updatedAt": "2025-02-18T11:21:33.463Z",
+        "publishedAt": "2025-02-18T11:21:11.700Z"
+      },
+      "desktopLogo": {
+        "id": 2,
+        "documentId": "aiuundnfn0p5r7r7l2myb7cb",
+        "name": "desktop-logo.svg",
+        "alternativeText": null,
+        "caption": null,
+        "width": 145,
+        "height": 56,
+        "formats": null,
+        "hash": "header_logo_b8ecd90069",
+        "ext": ".svg",
+        "mime": "image/svg+xml",
+        "size": 14.94,
+        "url": "/uploads/header_logo_b8ecd90069.svg",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "createdAt": "2025-02-17T12:21:00.443Z",
+        "updatedAt": "2025-02-18T11:21:44.894Z",
+        "publishedAt": "2025-02-17T12:21:00.444Z"
+      }
+    },
+    "footer": {
+      "id": 4,
+      "copyright": "@2019, Tech in Ruanda e.V.",
+      "imprint": "Imprint",
+      "imprintUrl": "/imprint"
+    }
+  },
+  "meta": {
+
+  }
+}
