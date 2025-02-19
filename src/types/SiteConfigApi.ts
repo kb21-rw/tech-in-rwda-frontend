@@ -1,4 +1,4 @@
-export type FooterProps = {
+export type FooterData = {
   id?: number;
   copyright: string;
   imprint: string;
