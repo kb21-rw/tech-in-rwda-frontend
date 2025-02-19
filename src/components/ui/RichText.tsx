@@ -4,7 +4,7 @@ import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 
 const RichText = ({ content }: any) => {
   return (
-    <div className="font-mulish text-primary text-base lg:text-2xl">
+    <div className="font-mulish text-primary text-base lg:text-2xl font-normal leading-5 lg:leading-7.53">
       <BlocksRenderer
         content={content}
         blocks={{

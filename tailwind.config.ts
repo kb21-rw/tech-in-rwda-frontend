@@ -20,6 +20,9 @@ export default {
         primary: "#757575",
         secondary: "#1A85C7",
       },
+      lineHeight: {
+        "7.53": "30.12px",
+      },
     },
   },
   plugins: [],
