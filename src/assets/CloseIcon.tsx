@@ -1,6 +1,6 @@
 const CloseIcon = () => {
   return (
-    <div className="w-20">
+    <div>
       <svg
         width="30"
         height="30"
