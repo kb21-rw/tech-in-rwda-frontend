@@ -1,11 +1,10 @@
 import Navbar from "@/components/Navbar";
 import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
 import "./globals.css";
-import navbarData from "../../public/data/siteConfig.json";
-import { data } from "../../public/data/siteConfig.json";
+import siteConfigData from "../../public/data/siteConfig.json";
 import Footer from "@/components/Footer";
 
-const { data } = navbarData;
+const { data } = siteConfigData;
 
 export const metadata = {
   icons: {
