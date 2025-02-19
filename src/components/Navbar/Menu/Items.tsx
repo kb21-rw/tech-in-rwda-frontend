@@ -11,7 +11,7 @@ export const MenuItems = ({
   isOpen: boolean;
   toggle: () => void;
 }) => {
-  const { links } = data.header;
+  const { links } = data;
   const pathname = usePathname();
 
   return (

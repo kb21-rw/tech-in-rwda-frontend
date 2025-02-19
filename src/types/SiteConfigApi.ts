@@ -17,15 +17,18 @@ export type MenuItem = {
   url: string;
 };
 
-export type Header = {
-  links: MenuItem[];
-  desktopLogo: Image;
-  mobileLogo: Image;
-};
+// export type Header = {
+//   links: MenuItem[];
+//   desktopLogo: Image;
+//   mobileLogo: Image;
+// };
 
 export type NavbarData = {
-  header: Header;
-}
+  desktopLogo: Image;
+  id: number;
+  links: MenuItem[];
+  mobileLogo: Image;
+};
 
 export type FooterData = {
   id?: number;

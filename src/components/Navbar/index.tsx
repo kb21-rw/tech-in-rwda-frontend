@@ -7,7 +7,7 @@ import { NavbarData } from "@/types/SiteConfigApi";
 import { MenuItems } from "./Menu/Items";
 
 const Navbar = (data: NavbarData) => {
-  const { desktopLogo, mobileLogo } = data.header;
+  const { desktopLogo, mobileLogo } = data;
   const [isOpen, setIsOpen] = useState(false);
 
   const toggle = () => {
