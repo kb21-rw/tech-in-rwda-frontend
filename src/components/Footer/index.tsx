@@ -4,7 +4,7 @@ import Link from "next/link";
 const Footer = (footer: FooterProps) => {
   const { copyright, imprint, imprintUrl } = footer;
   return (
-    <div className="flex justify-between lg:justify-start text-blue-250 py-5 lg:py-10 font-mulish text-xxs lg:text-sm font-normal">
+    <div className="flex justify-between lg:justify-start text-blue-250 py-5 lg:py-10 font-mulish text-xxs lg:text-sm font-normal leading-4.3925">
       <h1>{copyright}</h1>
       <span className="hidden lg:block px-3">/</span>
 

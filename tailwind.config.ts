@@ -24,6 +24,9 @@ export default {
       fontSize: {
         xxs: "10px",
       },
+      lineHeight: {
+        "4.3925": "17.57px",
+      },
     },
   },
   plugins: [],
