@@ -17,11 +17,27 @@ export default {
       },
       colors: {
         "blue-150": "#13446B",
+        "blue-250": "#0F446B",
         primary: "#757575",
         secondary: "#1A85C7",
       },
       lineHeight: {
         "7.53": "30.12px",
+      spacing: {
+        "7.2": "7.246%",
+        "7.5": "30px",
+        "16.75": "67px",
+        "12.5": "50px",
+        27: "108px",
+        "28.5": "114px",
+        "11.5": "46px",
+      },
+      fontSize: {
+        "2.5xl": "28px",
+        xxs: "10px",
+      },
+      lineHeight: {
+        "4.3925": "17.57px",
       },
     },
   },
