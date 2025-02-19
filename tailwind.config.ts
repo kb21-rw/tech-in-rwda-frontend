@@ -21,8 +21,6 @@ export default {
         primary: "#757575",
         secondary: "#1A85C7",
       },
-      lineHeight: {
-        "7.53": "30.12px",
       spacing: {
         "7.2": "7.246%",
         "7.5": "30px",
@@ -38,6 +36,7 @@ export default {
       },
       lineHeight: {
         "4.3925": "17.57px",
+        "7.53": "30.12px",
       },
     },
   },
