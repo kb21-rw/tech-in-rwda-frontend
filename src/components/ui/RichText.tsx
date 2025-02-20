@@ -19,12 +19,14 @@ const RichText = ({ content }: any) => {
 
           paragraph: ({ children }: any) => {
             const isCodeBlock = children.some(
-              (child: any) => typeof child === "object" && child?.code === true
+              (child: any) => child?.props.code === true
             );
 
             return isCodeBlock ? (
               <pre>
-                <code>{children.map((child: any) => child.text).join("")}</code>
+                <code>
+                  {children.filter((child: any) => child?.props.text)}
+                </code>
               </pre>
             ) : (
               <p className="pb-4 text-center lg:text-start paragraph">
