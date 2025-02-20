@@ -12,7 +12,11 @@ const RichText = ({ content }: any) => {
         content={content}
         blocks={{
           heading: ({ children, level }) => (
-            <h1 className={`font-bold text-center ${getTextSize(level)}`}>
+            <h1
+              className={`font-bold text-center text-black font-avenir ${getTextSize(
+                level
+              )}`}
+            >
               {children}
             </h1>
           ),
