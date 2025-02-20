@@ -2,6 +2,7 @@
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
 import { getTextSize } from "./TextSize";
+import Link from "next/link";
 
 const RichText = ({ content }: any) => {
   return (
@@ -21,7 +22,7 @@ const RichText = ({ content }: any) => {
             );
 
             return codeChildren.length > 0 ? (
-              <div className="bg-gray-700 text-white p-4 w-full lg:w-1/2 overflow-x-auto">
+              <div className="bg-gray-700 text-white p-4 w-full lg:w-1/2 overflow-x-auto text-">
                 <pre className="whitespace-pre-wrap">
                   <code>{codeChildren}</code>
                 </pre>
@@ -45,16 +46,38 @@ const RichText = ({ content }: any) => {
 
           "list-item": ({ children }) => <li className="my-1">{children}</li>,
 
-          link: ({ children, url }) => (
-            <a
-              href={url}
-              className="text-blue-600 underline hover:text-blue-800"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              {children}
-            </a>
-          ),
+          link: ({ children, url }: any) => {
+            const codeChildren = children.filter(
+              (child: any) => child?.props?.code === true
+            );
+
+            return (
+              <div>
+                {children.map((child, id) =>
+                  child?.props?.code === true ? (
+                    <div
+                      key={id}
+                      className="bg-gray-700 text-white p-4 w-full lg:w-1/2 overflow-x-auto"
+                    >
+                      <pre className="whitespace-pre-wrap">
+                        <code>{codeChildren}</code>
+                      </pre>
+                    </div>
+                  ) : (
+                    <Link
+                      key={id}
+                      href={"/"}
+                      className="text-blue-600 underline hover:text-blue-800"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      {child.props.text}
+                    </Link>
+                  )
+                )}
+              </div>
+            );
+          },
         }}
       />
     </div>
