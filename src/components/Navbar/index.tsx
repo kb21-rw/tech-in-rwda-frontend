@@ -17,8 +17,7 @@ const Navbar = (data: NavbarData) => {
   return (
     <nav
       className={`z-40 ${
-        isOpen &&
-        "fixed left-0 w-full h-full bg-red-200 px-7.2 lg:px-0 lg:static"
+        isOpen && "fixed left-0 w-full h-full bg-white px-7.2 lg:px-0 lg:static"
       }`}
     >
       <div className="flex flex-col lg:flex-row justify-between py-10">
