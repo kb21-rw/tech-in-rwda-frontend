@@ -1,6 +1,7 @@
 "use client";
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
+import { getTextSize } from "./TextSize";
 
 const RichText = ({ content }: any) => {
   return (
@@ -10,17 +11,7 @@ const RichText = ({ content }: any) => {
         blocks={{
           heading: ({ children, level }) => {
             return (
-              <h1
-                className={`font-bold my-4- text-center ${
-                  level === 1
-                    ? "text-4xl"
-                    : level === 2
-                    ? "text-3xl"
-                    : level === 3
-                    ? "text-2xl"
-                    : "text-xl"
-                }`}
-              >
+              <h1 className={`font-bold text-center ${getTextSize(level)}`}>
                 {children}
               </h1>
             );
