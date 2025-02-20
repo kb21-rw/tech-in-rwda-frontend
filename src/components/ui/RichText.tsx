@@ -23,7 +23,7 @@ const RichText = ({ content }: any) => {
             );
 
             return isCodeBlock ? (
-              <pre>
+              <pre className="py-4 text-lg px-4">
                 <code>
                   {children.filter((child: any) => child?.props.text)}
                 </code>
