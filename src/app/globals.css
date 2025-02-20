@@ -3,10 +3,6 @@
 @tailwind utilities;
 
 
-.paragraph:nth-child(n+6) {
-    @apply -mb-4;
-}
-
 .content-wrapper {
     @apply w-[85.5%] lg:w-[85%]  mx-auto
 } 

@@ -29,9 +29,7 @@ const RichText = ({ content }: any) => {
             return codeChildren.length > 0 ? (
               <CodeText>{codeChildren}</CodeText>
             ) : (
-              <p className="pb-4 text-center lg:text-start paragraph">
-                {children}
-              </p>
+              <p className="pb-4 text-center lg:text-start">{children}</p>
             );
           },
 
@@ -45,10 +43,10 @@ const RichText = ({ content }: any) => {
             </ul>
           ),
 
-          "list-item": ({ children }) => <li className="my-1">{children}</li>,
+          "list-item": ({ children }) => <li className="my-2">{children}</li>,
 
           link: ({ children, url }: any) => (
-            <div>
+            <div className="flex flex-col gap-10">
               {children.map((child, id) =>
                 child?.props?.code === true ? (
                   <CodeText key={id}>{child}</CodeText>
