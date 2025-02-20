@@ -26,11 +26,21 @@ const RichText = ({ content }: any) => {
             );
           },
 
-          paragraph: ({ children }) => (
-            <p className="pb-4 text-center lg:text-start paragraph">
-              {children}
-            </p>
-          ),
+          paragraph: ({ children }: any) => {
+            const isCodeBlock = children.some(
+              (child: any) => typeof child === "object" && child?.code === true
+            );
+
+            return isCodeBlock ? (
+              <pre>
+                <code>{children.map((child: any) => child.text).join("")}</code>
+              </pre>
+            ) : (
+              <p className="pb-4 text-center lg:text-start paragraph">
+                {children}
+              </p>
+            );
+          },
           list: ({ children, format }) => {
             return (
               <ul
@@ -54,11 +64,6 @@ const RichText = ({ content }: any) => {
             >
               {children}
             </a>
-          ),
-          code: ({ children }) => (
-            <pre className="bg-gray-100 rounded-md overflow-x-auto">
-              <code className="font-mono text-sm">{children}</code>
-            </pre>
           ),
         }}
       />

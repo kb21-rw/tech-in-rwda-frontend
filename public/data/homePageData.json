@@ -185,7 +185,7 @@
         ]
       },
       {
-        "type": "paragraph",
+        "type": "code",
         "children": [
           {
             "code": true,
@@ -195,7 +195,7 @@
         ]
       },
       {
-        "type": "paragraph",
+        "type": "code",
         "children": [
           {
             "code": true,
