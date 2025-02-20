@@ -11,15 +11,6 @@
     @apply w-[85.5%] lg:w-[85%]  mx-auto
 } 
 
-pre {
-    background: #2d2d2d;
-    color: #f8f8f2;
-    border-radius: 10px;
-    overflow-x: auto;
-    width: 50%;
-    margin-bottom: 2rem;
-    padding-top: 10px;
-}
 code {
     font-family: "Fira Code", monospace;
 }

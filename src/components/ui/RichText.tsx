@@ -9,45 +9,42 @@ const RichText = ({ content }: any) => {
       <BlocksRenderer
         content={content}
         blocks={{
-          heading: ({ children, level }) => {
-            return (
-              <h1 className={`font-bold text-center ${getTextSize(level)}`}>
-                {children}
-              </h1>
-            );
-          },
+          heading: ({ children, level }) => (
+            <h1 className={`font-bold text-center ${getTextSize(level)}`}>
+              {children}
+            </h1>
+          ),
 
           paragraph: ({ children }: any) => {
-            const isCodeBlock = children.some(
-              (child: any) => child?.props.code === true
+            const codeChildren = children.filter(
+              (child: any) => child?.props?.code === true
             );
 
-            return isCodeBlock ? (
-              <pre className="py-4 text-lg px-4">
-                <code>
-                  {children.filter((child: any) => child?.props.text)}
-                </code>
-              </pre>
+            return codeChildren.length > 0 ? (
+              <div className="bg-gray-700 text-white p-4 w-full lg:w-1/2 overflow-x-auto">
+                <pre className="whitespace-pre-wrap">
+                  <code>{codeChildren}</code>
+                </pre>
+              </div>
             ) : (
               <p className="pb-4 text-center lg:text-start paragraph">
                 {children}
               </p>
             );
           },
-          list: ({ children, format }) => {
-            return (
-              <ul
-                className={`ml-6 ${
-                  format === "ordered" ? "list-decimal" : "list-disc"
-                }`}
-              >
-                {children}
-              </ul>
-            );
-          },
-          "list-item": ({ children }) => {
-            return <li className="my-1">{children}</li>;
-          },
+
+          list: ({ children, format }) => (
+            <ul
+              className={`ml-6 ${
+                format === "ordered" ? "list-decimal" : "list-disc"
+              }`}
+            >
+              {children}
+            </ul>
+          ),
+
+          "list-item": ({ children }) => <li className="my-1">{children}</li>,
+
           link: ({ children, url }) => (
             <a
               href={url}
