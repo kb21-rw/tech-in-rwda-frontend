@@ -7,7 +7,7 @@ const Header = ({ title, description }: HeaderData) => {
       <span className="border-b-2 border-b-secondary w-11.25" />
       <div>
         {description && (
-          <p className="font-mulish text-primary text-base lg:text-2xl py-7.5 lg:py-15 leading-5 lg:leading-7.5 font-normal">
+          <p className="font-mulish text-primary text-base lg:text-2xl pb-10 lg:py-25 leading-5 lg:leading-7.5 font-normal">
             {description}
           </p>
         )}
