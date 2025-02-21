@@ -1,10 +1,12 @@
 import { Image } from "./image";
 
+export type ImageTypes = {
+  id?: number;
+  attributes: Image;
+};
+
 export type ImageData = {
-  data: {
-    id?: number;
-    attributes: Image;
-  };
+  data: ImageTypes;
 };
 
 export type ImageCardType = {

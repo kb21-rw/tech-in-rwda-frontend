@@ -6,7 +6,6 @@ const ImageCard = (props: ImageCardType) => {
   const { link, image, title, description } = props;
   const { url, width, height } = image.data.attributes;
 
-  console.log("cards", props);
   return (
     <div className="relative">
       <Link href={link}>
