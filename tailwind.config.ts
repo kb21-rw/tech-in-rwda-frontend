@@ -29,6 +29,7 @@ export default {
         27: "108px",
         "28.5": "114px",
         "11.5": "46px",
+        45: "180px",
       },
       fontSize: {
         "2.5xl": "28px",

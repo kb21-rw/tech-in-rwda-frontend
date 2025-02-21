@@ -1,6 +1,6 @@
 export type Image = {
   url: string;
-  alt: string;
+  alternativeText: string;
   width: number;
   height: number;
 };
