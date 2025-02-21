@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ImageCardType } from "@/types/SiteConfigApi";
+import { ImageCardType } from "@/types/ImageCard";
 
 const ImageCard = (props: ImageCardType) => {
   const { link, image, title, description } = props;

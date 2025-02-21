@@ -1,5 +1,5 @@
+import { ImageCardData } from "@/types/ImageCard";
 import ArticlesCard from "./Card";
-import { ImageCardData } from "@/types/SiteConfigApi";
 
 const ImageCardGrid = ({ cards }: ImageCardData) => {
   return (
