@@ -1,13 +1,4 @@
-import { Image } from "./image";
-
-export type ImageTypes = {
-  id?: number;
-  attributes: Image;
-};
-
-export type ImageData = {
-  data: ImageTypes;
-};
+import { ImageData } from "./image";
 
 export type ImageCardType = {
   id: number;
