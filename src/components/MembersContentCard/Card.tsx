@@ -6,7 +6,7 @@ const MembersCard = (data: MembersCardData) => {
     <div className="flex-col lg:flex-row flex gap-7.5 lg:gap-10">
       <Image
         src={data.image.url}
-        alt={data.image.alternativeText}
+        alt="members"
         width={data.image.width}
         height={data.image.height}
         className="w-full lg:w-45 h-full object-cover"
