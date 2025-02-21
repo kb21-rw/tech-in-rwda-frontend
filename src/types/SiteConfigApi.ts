@@ -17,12 +17,6 @@ export type MenuItem = {
   url: string;
 };
 
-// export type Header = {
-//   links: MenuItem[];
-//   desktopLogo: Image;
-//   mobileLogo: Image;
-// };
-
 export type NavbarData = {
   desktopLogo: Image;
   id: number;
@@ -35,4 +29,23 @@ export type FooterData = {
   copyright: string;
   imprint: string;
   imprintUrl: string;
+};
+
+export type ImageData = {
+  data: {
+    id?: number;
+    attributes: Image;
+  };
+};
+
+export type ImageCardType = {
+  id: number;
+  title: string;
+  description: string;
+  link: string;
+  image: ImageData;
+};
+
+export type ImageCardData = {
+  cards: ImageCardType[];
 };

@@ -1,4 +1,4 @@
-import Articles from "@/components/Articles";
+import ImageCardGrid from "@/components/ImageCardGrid";
 import { data } from "../../../public/data/projectsPage.json";
 
 const Projects = () => {
@@ -6,7 +6,7 @@ const Projects = () => {
 
   return (
     <div>
-      <Articles {...articles} />
+      <ImageCardGrid {...articles} />
     </div>
   );
 };

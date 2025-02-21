@@ -1,8 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
+import { ImageCardType } from "@/types/SiteConfigApi";
 
-const ArticlesCard = ({ link, image, title, description }: any) => {
+const ImageCard = (props: ImageCardType) => {
+  const { link, image, title, description } = props;
   const { url, width, height } = image.data.attributes;
+
+  console.log("cards", props);
   return (
     <div className="relative">
       <Link href={link}>
@@ -25,4 +29,4 @@ const ArticlesCard = ({ link, image, title, description }: any) => {
   );
 };
 
-export default ArticlesCard;
+export default ImageCard;

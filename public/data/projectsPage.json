@@ -23,7 +23,7 @@
             "data": {
               "id": 36,
               "attributes": {
-                "alternativeText": "",
+                "alt": "",
                 "url": "/uploads/image 1.png",
                 "width": 538,
                 "height": 317
@@ -40,7 +40,7 @@
             "data": {
               "id": 36,
               "attributes": {
-                "alternativeText": "",
+                "alt": "",
                 "url": "/uploads/image 1.png",
                 "width": 538,
                 "height": 317
@@ -57,7 +57,7 @@
             "data": {
               "id": 36,
               "attributes": {
-                "alternativeText": "",
+                "alt": "",
                 "url": "/uploads/image 1.png",
                 "width": 538,
                 "height": 317
@@ -74,7 +74,7 @@
             "data": {
               "id": 36,
               "attributes": {
-                "alternativeText": "",
+                "alt": "",
                 "url": "/uploads/image 1.png",
                 "width": 538,
                 "height": 317
