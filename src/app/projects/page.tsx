@@ -1,7 +1,14 @@
-import React from "react";
+import Articles from "@/components/Articles";
+import { data } from "../../../public/data/projectsPage.json";
 
 const Projects = () => {
-  return <div className="absolute">Contact</div>;
+  const { articles } = data;
+
+  return (
+    <div className="absolute">
+      <Articles {...articles} />
+    </div>
+  );
 };
 
 export default Projects;
