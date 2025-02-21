@@ -31,6 +31,7 @@ export default {
         "11.5": "46px",
       },
       fontSize: {
+        "3.5xl": "32px",
         "2.5xl": "28px",
         xxs: "10px",
       },

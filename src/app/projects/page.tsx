@@ -5,7 +5,7 @@ const Projects = () => {
   const { articles } = data;
 
   return (
-    <div className="absolute">
+    <div>
       <Articles {...articles} />
     </div>
   );
