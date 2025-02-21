@@ -3,7 +3,7 @@ import { data } from "../../../public/data/membersPageData.json";
 
 const Members = () => {
   return (
-    <div>
+    <div className="px-0 lg:px-34">
       <MembersContentCard {...data} />
     </div>
   );
