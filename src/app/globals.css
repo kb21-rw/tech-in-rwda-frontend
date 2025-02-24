@@ -6,3 +6,7 @@
 .content-wrapper {
     @apply w-[85.5%] lg:w-[85%]  mx-auto
 } 
+
+code {
+    font-family: "Fira Code", monospace;
+}

@@ -36,6 +36,7 @@ export default {
       },
       lineHeight: {
         "4.3925": "17.57px",
+        "7.53": "30.12px",
       },
     },
   },
