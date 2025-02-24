@@ -1,11 +1,11 @@
-import Header from "@/components/Header";
+import Header from "@/components/TextBlock";
 import headerData from "../../public/data/homePageData.json";
 
 export default function Home() {
-  const { title } = headerData.data;
+  const { title, variant } = headerData.data;
   return (
     <h1 className="font-avenir">
-      <Header title={title} />
+      <Header title={title} variant={variant} />
     </h1>
   );
 }

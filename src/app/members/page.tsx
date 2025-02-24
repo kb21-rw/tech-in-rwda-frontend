@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/TextBlock";
 import membersData from "../../../public/data/membersPageData.json";
 
 const Members = () => {

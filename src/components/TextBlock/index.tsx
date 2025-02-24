@@ -1,9 +1,18 @@
 import { HeaderData } from "@/types/HeaderData";
 
-const Header = ({ title, description }: HeaderData) => {
+const TextBlock = ({ title, description, variant }: HeaderData) => {
+  console.log("variant", variant);
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
-      <h1 className="font-avenir text-4xl lg:text-6xl">{title}</h1>
+      <h1
+        className={`font-avenir ${
+          variant === "secondary"
+            ? "text-primary text-2xl lg:text-4xl"
+            : "text-4xl lg:text-6xl"
+        } `}
+      >
+        {title}
+      </h1>
       <span className="border-b-2 border-b-secondary w-11.25" />
       <div>
         {description && (
@@ -16,4 +25,4 @@ const Header = ({ title, description }: HeaderData) => {
   );
 };
 
-export default Header;
+export default TextBlock;
