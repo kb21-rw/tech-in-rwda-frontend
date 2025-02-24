@@ -6,6 +6,6 @@ export default function Home() {
   return (
     <div>
       <RichText content={description} />
-    </div> 
+    </div>
   );
 }

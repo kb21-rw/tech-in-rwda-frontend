@@ -47,7 +47,7 @@ const RichText = ({ content }: any) => {
 
           link: ({ children, url }: any) => (
             <div className="flex flex-col gap-10">
-              {children.map((child, id) =>
+              {children.map((child: any, id: any) =>
                 child?.props?.code === true ? (
                   <CodeText key={id}>{child}</CodeText>
                 ) : (
