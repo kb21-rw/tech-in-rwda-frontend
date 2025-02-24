@@ -1,7 +1,7 @@
 import MembersCard from "./Card";
 import { MembersData } from "@/types/MembersData";
 
-const MembersContentCard = ({ contributors }: MembersData) => {
+const ImageCardBlock = ({ contributors }: MembersData) => {
   return (
     <div className="flex flex-col gap-7.5">
       {contributors.map((contributor, id) => (
@@ -13,4 +13,4 @@ const MembersContentCard = ({ contributors }: MembersData) => {
   );
 };
 
-export default MembersContentCard;
+export default ImageCardBlock;

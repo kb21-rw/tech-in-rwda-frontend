@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { MembersCardData } from "@/types/MembersData";
 
-const MembersCard = ({ image, title, description }: MembersCardData) => {
+const ImageCard = ({ image, title, description }: MembersCardData) => {
   return (
     <div className="flex-col lg:flex-row flex gap-7.5 lg:gap-10">
       <Image
@@ -21,4 +21,4 @@ const MembersCard = ({ image, title, description }: MembersCardData) => {
   );
 };
 
-export default MembersCard;
+export default ImageCard;
