@@ -8,14 +8,13 @@ const TextGrid = ({
   return (
     <ul
       className={`${
-        hasBulletPoints ? "custom-list gap-y-7.5 lg:gap-y-11.25" : ""
+        hasBulletPoints
+          ? "custom-list gap-y-7.5 text-base lg:text-lg lg:gap-y-11.25"
+          : "text-base lg:text-2xl"
       } grid lg:grid-cols-2 gap-x-20`}
     >
       {listItem.map((item) => (
-        <li
-          key={item.id}
-          className="text-primary text-lg font-mulish font-normal"
-        >
+        <li key={item.id} className="text-primary font-mulish font-normal">
           {item.description}
         </li>
       ))}
