@@ -1,7 +1,7 @@
 import MembersCard from "./Card";
-import { MembersData } from "@/types/MembersData";
+import { ImageCardBlockData } from "@/types/ImageCardBlockData";
 
-const ImageCardBlock = ({ contributors }: MembersData) => {
+const ImageCardBlock = ({ contributors }: ImageCardBlockData) => {
   return (
     <div className="flex flex-col gap-7.5">
       {contributors.map((contributor, id) => (

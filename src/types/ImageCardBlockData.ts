@@ -1,13 +1,13 @@
 import { Image } from "./image";
 
-export type MembersCardData = {
+export type ImageCardData = {
   id: number;
   description: string;
   title: string;
   image: Image;
 };
 
-export type MembersData = {
+export type ImageCardBlockData = {
   id?: number;
   documentId?: string;
   title?: string;
@@ -15,5 +15,5 @@ export type MembersData = {
   createdAt?: string;
   updatedAt?: string;
   publishedAt?: string;
-  contributors: MembersCardData[];
+  contributors: ImageCardData[];
 };

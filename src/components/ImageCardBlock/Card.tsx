@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { MembersCardData } from "@/types/MembersData";
+import { ImageCardData } from "@/types/ImageCardBlockData";
+import RichText from "../ui/RichText";
 
-const ImageCard = ({ image, title, description }: MembersCardData) => {
+const ImageCard = ({ image, title, description }: ImageCardData) => {
   return (
     <div className="flex-col lg:flex-row flex gap-7.5 lg:gap-10">
       <Image
@@ -13,9 +14,7 @@ const ImageCard = ({ image, title, description }: MembersCardData) => {
       />
       <div className="font-mulish">
         <h4 className="font-bold text-2xl">{title}</h4>
-        <p className="font-normal text-sm lg:text-lg text-primary">
-          {description}
-        </p>
+        <RichText content={description} />
       </div>
     </div>
   );

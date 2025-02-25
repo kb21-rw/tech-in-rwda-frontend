@@ -29,7 +29,15 @@ const RichText = ({ content }: any) => {
             return codeChildren.length > 0 ? (
               <CodeText>{codeChildren}</CodeText>
             ) : (
-              <p className="pb-4 text-center lg:text-start">{children}</p>
+              <p
+                className={`${
+                  content[0].variant === "header"
+                    ? "font-normal text-sm lg:text-lg text-primary pb-3"
+                    : "pb-4 text-center lg:text-start"
+                }`}
+              >
+                {children}
+              </p>
             );
           },
 
