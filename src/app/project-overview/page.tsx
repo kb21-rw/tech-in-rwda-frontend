@@ -5,7 +5,7 @@ const ProjectOverview = () => {
   const { characteristics } = data[0];
 
   return (
-    <div className="px-0 lg:px-[175px]">
+    <div className="px-0 lg:px-43.75">
       <TextGrid {...characteristics} />
     </div>
   );
