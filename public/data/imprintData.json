@@ -1,0 +1,89 @@
+{
+    "__component": "blocks.left-and-right-contents",
+    "id": 2,
+    "left": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Rock Tech Lithium Inc.",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "600 – 777 Hornby Street",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Vancouver, British Columbia",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "V6Z 1S4",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "(778) 358-5200",
+            "type": "text"
+          }
+        ]
+      }
+    ],
+    "right": [
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Wenn Sie weitere Fragen haben",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "senden Sie uns gerne eine ",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "Nachricht an ",
+            "type": "text"
+          }
+        ]
+      },
+      {
+        "type": "paragraph",
+        "children": [
+          {
+            "text": "info@rocktechlithium.com.",
+            "type": "text"
+          }
+        ]
+      }
+    ]
+  }
