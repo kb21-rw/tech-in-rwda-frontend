@@ -205,7 +205,7 @@
         ]
       },
       {
-        "type": "paragraph",
+        "type": "link",
         "children": [
           {
             "code": true,
@@ -225,3 +225,4 @@
 
   }
 }
+
