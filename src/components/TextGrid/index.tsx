@@ -11,7 +11,7 @@ const TextGrid = ({
         hasBulletPoints
           ? "custom-list gap-y-7.5 text-base lg:text-lg lg:gap-y-11.25"
           : "text-base lg:text-2xl"
-      } grid lg:grid-cols-2 gap-x-20`}
+      } grid md:grid-cols-2 gap-x-20`}
     >
       {listItem.map((item) => (
         <li key={item.id} className="text-primary font-mulish font-normal">
