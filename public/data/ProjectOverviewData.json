@@ -39,6 +39,7 @@
         ],
         "characteristics": {
         "hasBulletPoints": true,
+        "hasSpacing": false,
           "id": 2,
           "listItem": [
             {
