@@ -17,6 +17,12 @@ export type MenuItem = {
   url: string;
 };
 
+export type Header = {
+  links: MenuItem[];
+  desktopLogo: Image;
+  mobileLogo: Image;
+};
+
 export type NavbarData = {
   desktopLogo: Image;
   id: number;

@@ -1,7 +1,11 @@
+import RichText from "@/components/ui/RichText";
+import { data } from "../../public/data/homePageData.json";
+
 export default function Home() {
+  const { description } = data;
   return (
-    <>
-      <h1>Home page</h1>
-    </>
+    <div>
+      <RichText content={description} />
+    </div>
   );
 }
