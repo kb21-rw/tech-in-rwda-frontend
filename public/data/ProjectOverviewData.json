@@ -1,0 +1,273 @@
+{
+    "data": [
+      {
+        "id": 4,
+        "documentId": "s98vt65534m5xinv32427tpd",
+        "title": "Code+Design Camps",
+        "createdAt": "2025-02-17T14:37:08.821Z",
+        "updatedAt": "2025-02-17T14:45:20.630Z",
+        "publishedAt": "2025-02-17T14:45:20.661Z",
+        "description": "Code+Design Camp is an educational methodology that aims at getting \nparticipants with little to no prior programming experience interested in \ncoding. Bringing the Code+Design Camp methodology to Rwanda has been\nan initiative by German Rwandan Tech Network founding member Franziska\nKnauer as well as a team of facilitators from Code University Berlin and the\nCode+Design Camp association in cooperation with the Digital \nTransformation Center in Kigali.\n\nThe first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming.\n",
+        "slug": "code-design-camps",
+        "image": {
+          "id": 15,
+          "documentId": "jndku4jd3r31gijhqw7csxry",
+          "name": "image 1.svg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 538,
+          "height": 317,
+          "formats": null,
+          "hash": "image_1_df79f0e199",
+          "ext": ".svg",
+          "mime": "image/svg+xml",
+          "size": 1124.27,
+          "url": "/uploads/image_1_df79f0e199.svg",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-02-17T14:37:30.301Z",
+          "updatedAt": "2025-02-17T14:37:48.614Z",
+          "publishedAt": "2025-02-17T14:37:30.301Z"
+        },
+        "services": [
+          {
+            "id": 3,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          }
+        ],
+        "characteristics": {
+        "hasBulletPoints": true,
+        "hasSpacing": false,
+          "id": 2,
+          "listItem": [
+            {
+              "id": 5,
+              "description": "The German Rwandan Tech Network is a \nplatform that brings together tech-leaders"
+            },
+            {
+              "id": 6,
+              "description": "The German Rwandan Tech Network is a \nplatform that brings together tech-leaders"
+            },
+            {
+              "id": 7,
+              "description": "The German Rwandan Tech Network is a \nplatform that brings together tech-leaders"
+            },
+            {
+              "id": 8,
+              "description": "The German Rwandan Tech Network is a \nplatform that brings together tech-leaders"
+            }
+          ]
+        }
+      },
+      {
+        "id": 6,
+        "documentId": "e66jaq8b0px37crjqgrzq44a",
+        "title": "Project 2",
+        "createdAt": "2025-02-17T14:48:00.237Z",
+        "updatedAt": "2025-02-17T14:48:00.237Z",
+        "publishedAt": "2025-02-17T14:48:00.254Z",
+        "description": "Project 2 description",
+        "slug": "project-2",
+        "image": {
+          "id": 17,
+          "documentId": "fuaf0awy9y4v6n41jy9vnx28",
+          "name": "image 2.svg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 538,
+          "height": 317,
+          "formats": null,
+          "hash": "image_2_1e0d155f8d",
+          "ext": ".svg",
+          "mime": "image/svg+xml",
+          "size": 1194.04,
+          "url": "/uploads/image_2_1e0d155f8d.svg",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-02-17T14:37:30.341Z",
+          "updatedAt": "2025-02-17T14:46:23.256Z",
+          "publishedAt": "2025-02-17T14:37:30.341Z"
+        },
+        "services": [
+          {
+            "id": 6,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          },
+          {
+            "id": 7,
+            "title": "service 2",
+            "description": "description for project service 2 .fdsa....."
+          }
+        ],
+        "caracteristics": {
+          "id": 4,
+          "listItem": [
+            {
+              "id": 13,
+              "description": "first"
+            },
+            {
+              "id": 14,
+              "description": "second"
+            },
+            {
+              "id": 15,
+              "description": "third"
+            },
+            {
+              "id": 16,
+              "description": "fourth"
+            }
+          ]
+        }
+      },
+      {
+        "id": 8,
+        "documentId": "pj9uc5lunu9q2n7x32pe6986",
+        "title": "Project 3",
+        "createdAt": "2025-02-17T14:50:10.797Z",
+        "updatedAt": "2025-02-17T14:50:10.797Z",
+        "publishedAt": "2025-02-17T14:50:10.809Z",
+        "description": "Description for project 3",
+        "slug": "project-3",
+        "image": {
+          "id": 16,
+          "documentId": "sr9z7n52z8lv5qbohcpczpo4",
+          "name": "image 3.svg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 538,
+          "height": 317,
+          "formats": null,
+          "hash": "image_3_72c758fcf7",
+          "ext": ".svg",
+          "mime": "image/svg+xml",
+          "size": 879.75,
+          "url": "/uploads/image_3_72c758fcf7.svg",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-02-17T14:37:30.303Z",
+          "updatedAt": "2025-02-17T14:37:30.303Z",
+          "publishedAt": "2025-02-17T14:37:30.303Z"
+        },
+        "services": [
+          {
+            "id": 11,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          },
+          {
+            "id": 12,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          },
+          {
+            "id": 13,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          }
+        ],
+        "caracteristics": {
+          "id": 6,
+          "listItem": [
+            {
+              "id": 23,
+              "description": "first"
+            },
+            {
+              "id": 24,
+              "description": "second"
+            },
+            {
+              "id": 25,
+              "description": "third"
+            },
+            {
+              "id": 26,
+              "description": "fourth"
+            },
+            {
+              "id": 27,
+              "description": "fith"
+            },
+            {
+              "id": 28,
+              "description": "six"
+            }
+          ]
+        }
+      },
+      {
+        "id": 10,
+        "documentId": "jiszaykhasceqm0x9fk07c7y",
+        "title": "Project 4",
+        "createdAt": "2025-02-17T14:51:40.049Z",
+        "updatedAt": "2025-02-17T14:51:40.049Z",
+        "publishedAt": "2025-02-17T14:51:40.060Z",
+        "description": "Code+Design Camp is an educational methodology that aims at getting \nparticipants with little to no prior programming experience interested in \ncoding. Bringing the Code+Design Camp methodology to Rwanda has been\nan initiative by German Rwandan Tech Network founding member Franziska\nKnauer as well as a team of facilitators from Code University Berlin and the\nCode+Design Camp association in cooperation with the Digital \nTransformation Center in Kigali.\n",
+        "slug": "project-4",
+        "image": {
+          "id": 18,
+          "documentId": "mq9mg5dvloynwnhlpl23vdw1",
+          "name": "image 4.svg",
+          "alternativeText": null,
+          "caption": null,
+          "width": 538,
+          "height": 317,
+          "formats": null,
+          "hash": "image_4_246f16090b",
+          "ext": ".svg",
+          "mime": "image/svg+xml",
+          "size": 1448.71,
+          "url": "/uploads/image_4_246f16090b.svg",
+          "previewUrl": null,
+          "provider": "local",
+          "provider_metadata": null,
+          "createdAt": "2025-02-17T14:37:30.365Z",
+          "updatedAt": "2025-02-17T14:37:30.365Z",
+          "publishedAt": "2025-02-17T14:37:30.366Z"
+        },
+        "services": [
+          {
+            "id": 15,
+            "title": "About the Code+Design Camp methodology",
+            "description": "The first Code+Design Camp Kigali was implemented at the Digital \nTransformation Center from the 27th to the 30th of August 2019. A second \none took place in November. Participants of both camp have already started\nfollow-up meetups in which they continue their learning journey in the field \nof programming."
+          }
+        ],
+        "caracteristics": {
+          "id": 8,
+          "listItem": [
+            {
+              "id": 33,
+              "description": "first"
+            },
+            {
+              "id": 34,
+              "description": "tfdlsakdfjalskdfjalksdjfalksdfa"
+            },
+            {
+              "id": 35,
+              "description": "dfas09-3reiqpowirpoewrqe"
+            },
+            {
+              "id": 36,
+              "description": "fourth"
+            }
+          ]
+        }
+      }
+    ],
+    "meta": {
+      "pagination": {
+        "page": 1,
+        "pageSize": 25,
+        "pageCount": 1,
+        "total": 4
+      }
+    }
+  }

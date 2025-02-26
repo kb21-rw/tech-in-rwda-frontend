@@ -10,3 +10,10 @@
 code {
     font-family: "Fira Code", monospace;
 }
+  
+.custom-list li::before {
+ content: "•";
+ @apply text-3xl text-secondary mr-3
+}
+  
+  
