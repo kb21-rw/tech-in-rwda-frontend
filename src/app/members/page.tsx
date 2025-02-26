@@ -1,11 +1,11 @@
-import Header from "@/components/TextBlock";
+import TextBlock from "@/components/TextBlock";
 import membersData from "../../../public/data/membersPageData.json";
 
 const Members = () => {
   const { data } = membersData;
   return (
     <div>
-      <Header {...data} />
+      <TextBlock {...data} />
     </div>
   );
 };
