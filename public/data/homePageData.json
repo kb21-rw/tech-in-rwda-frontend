@@ -49,7 +49,7 @@
         "type": "paragraph",
         "children": [
           {
-            "text": "Lorem ipsum dolor sit amet, consectetur adipis cing elit. Tincidunt commodo dictum ipsum commodo. Sed in est lorem a consequat tincidunt quam turpis venenatis. Faucibus sagittis, bibendum vitae volutpat justo ullamcorper sit turpis pretium. ",
+            "text": "Tech in Ruanda e.V. is a German non-profit association dedicated to promoting the Rwandan tech-industry by",
             "type": "text"
           }
         ]
@@ -225,3 +225,4 @@
 
   }
 }
+
