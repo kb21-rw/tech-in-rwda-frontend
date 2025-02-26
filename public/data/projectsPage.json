@@ -1,0 +1,91 @@
+{
+    "data": {
+      "id": 2,
+      "documentId": "pw93at6ojvv8wiw9wsghqwjk",
+      "title": "Discover our projects",
+      "description": "The German Rwandan Tech Network is a platform that brings together tech-leaders from Rwanda \nand Germany.",
+      "createdAt": "2025-02-17T14:29:54.799Z",
+      "updatedAt": "2025-02-17T14:29:54.799Z",
+      "publishedAt": "2025-02-17T14:29:54.811Z",
+      "metadata": {
+        "id": 7,
+        "title": "all projects",
+        "description": "Le lorem ipsum est, en imprimerie, une suite de mots sans signification utilisée à titre provisoire pour calibrer une mise en page, le texte définitif venant remplacer le faux-texte dès qu'il est prêt ou que la mise en page est achevée. Généralement, on utilise un texte en faux latin, le Lorem ipsum ou Lipsum."
+      },
+      "articles": {
+        "cards": [
+        {
+          "id": 1,
+          "title": "Code + Design Camps",
+          "description": "The Code + Design Camp is ans educational methodology that aims...",
+          "link": "/project-overview",
+          "image": {
+            "data": {
+              "id": 36,
+              "attributes": {
+                "alt": "",
+                "url": "/uploads/image 1.png",
+                "width": 538,
+                "height": 317
+              }
+            }
+          }
+        },
+        {
+          "id": 2,
+          "title": "Code + Design Camps",
+          "description": "The Code + Design Camp is ans educational methodology that aims...",
+          "link": "/project-overview",
+          "image": {
+            "data": {
+              "id": 36,
+              "attributes": {
+                "alt": "",
+                "url": "/uploads/image 1.png",
+                "width": 538,
+                "height": 317
+              }
+            }
+          }
+        },
+        {
+          "id": 3,
+          "title": "Code + Design Camps",
+          "description": "The Code + Design Camp is ans educational methodology that aims...",
+          "link": "/project-overview",
+          "image": {
+            "data": {
+              "id": 36,
+              "attributes": {
+                "alt": "",
+                "url": "/uploads/image 1.png",
+                "width": 538,
+                "height": 317
+              }
+            }
+          }
+        },
+        {
+          "id": 4,
+          "title": "Code + Design Camps",
+          "description": "The Code + Design Camp is ans educational methodology that aims...",
+          "link": "/project-overview",
+          "image": {
+            "data": {
+              "id": 36,
+              "attributes": {
+                "alt": "",
+                "url": "/uploads/image 1.png",
+                "width": 538,
+                "height": 317
+              }
+            }
+          }
+        }
+      ]
+      }
+    },
+    "meta": {
+  
+    }
+  }

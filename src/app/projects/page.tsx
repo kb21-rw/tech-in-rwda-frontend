@@ -1,7 +1,14 @@
-import React from "react";
+import ImageCardGrid from "@/components/ImageCardGrid";
+import { data } from "../../../public/data/projectsPage.json";
 
 const Projects = () => {
-  return <div className="absolute">Contact</div>;
+  const { articles } = data;
+
+  return (
+    <div>
+      <ImageCardGrid {...articles} />
+    </div>
+  );
 };
 
 export default Projects;
