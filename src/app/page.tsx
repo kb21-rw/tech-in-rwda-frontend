@@ -1,16 +1,14 @@
-import Header from "@/components/TextBlock";
-import headerData from "../../public/data/homePageData.json";
+import TextBlock from "@/components/TextBlock";
 import RichText from "@/components/ui/RichText";
 import { data } from "../../public/data/homePageData.json";
 
 export default function Home() {
-  const { title, variant } = headerData.data;
-  const { description } = data;
+  const { description, title } = data;
   return (
     <div>
       <h1 className="font-avenir">
-      <Header title={title} variant={variant} />
-    </h1>
+        <TextBlock title={title} />
+      </h1>
       <RichText content={description} />
     </div>
   );

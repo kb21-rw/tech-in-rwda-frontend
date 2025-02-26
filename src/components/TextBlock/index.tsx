@@ -1,7 +1,6 @@
 import { HeaderData } from "@/types/HeaderData";
 
 const TextBlock = ({ title, description, variant }: HeaderData) => {
-  console.log("variant", variant);
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
       <h1
