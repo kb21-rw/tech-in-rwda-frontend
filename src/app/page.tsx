@@ -1,15 +1,40 @@
-import TextBlock from "@/components/TextBlock";
+import ComponentParser from "@/cms/ComponentParser";
 import RichText from "@/components/ui/RichText";
-import { data } from "../../public/data/homePageData.json";
 
-export default function Home() {
-  const { description, title } = data;
+const fetchEntity = async ({ path }: { path: string }) => {
+  const res = await fetch(`${process.env.BASE_URL}${path}`);
+
+  if (!res.ok) throw new Error("Failed to fetch data");
+
+  return res.json();
+};
+
+export default async function Home() {
+  let homepage;
+  try {
+    homepage = await fetchEntity({ path: "pages" });
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    homepage = null;
+  }
+
+  const data = homepage.data[0];
   return (
     <div>
-      <h1 className="font-avenir">
-        <TextBlock title={title} />
-      </h1>
-      <RichText content={description} />
+      {data.blocks.map((item: any) => {
+        return (
+          <div>
+            {homepage ? (
+              <>
+                <ComponentParser title={data} />
+                <RichText content={item.description} />
+              </>
+            ) : (
+              <p>Failed to load page content.</p>
+            )}
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -1,6 +1,6 @@
 import { HeaderData } from "@/types/HeaderData";
 
-const TextBlock = ({ title, description, variant }: HeaderData) => {
+const TextBlock = ({ title, variant, description }: HeaderData) => {
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
       <h1
