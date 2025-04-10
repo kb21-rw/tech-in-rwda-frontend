@@ -6,7 +6,6 @@ import Link from "next/link";
 import CodeText from "./CodeText";
 
 const RichText = ({ content }: any) => {
-  console.log("cjjjjjj", content);
   return (
     <div className="font-mulish text-primary text-base lg:text-2xl font-normal leading-5 lg:leading-7.53">
       <BlocksRenderer

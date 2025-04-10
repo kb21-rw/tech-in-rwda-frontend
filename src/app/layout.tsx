@@ -24,7 +24,8 @@ export default function RootLayout({
     >
       <body className="content-wrapper">
         <Navbar {...header} />
-        {children} <Footer {...footer} />
+        {children}
+        <Footer {...footer} />
       </body>
     </html>
   );

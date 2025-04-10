@@ -34,7 +34,7 @@
         {
           "id": 17,
           "text": "About",
-          "url": "/about"
+          "url": "/"
         },
         {
           "id": 18,
@@ -44,7 +44,7 @@
         {
           "id": 19,
           "text": "German Rwanda Tech Network",
-          "url": "/german-rwanda-tech-network"
+          "url": "/contributors"
         },
         {
           "id": 20,
@@ -103,7 +103,5 @@
       "imprintUrl": "/imprint"
     }
   },
-  "meta": {
-
-  }
+  "meta": {}
 }
