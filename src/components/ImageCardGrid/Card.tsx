@@ -3,7 +3,6 @@ import Link from "next/link";
 // import { ImageCardType } from "@/types/ImageCard";
 
 const ImageCard = ({ data }: any) => {
-  console.log("vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv", data);
   const { link, title, description } = data;
   // const { url, width, height } = image?.data.attributes;
 
