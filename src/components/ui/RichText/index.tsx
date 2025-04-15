@@ -33,7 +33,7 @@ const RichText = ({ content }: any) => {
                 className={`${
                   content[0].variant === "header"
                     ? "font-normal text-sm lg:text-lg text-primary pb-3"
-                    : "pb-4 text-center lg:text-start"
+                    : "pb-4"
                 }`}
               >
                 {children}
@@ -43,7 +43,7 @@ const RichText = ({ content }: any) => {
 
           list: ({ children, format }) => (
             <ul
-              className={`ml-6 ${
+              className={`ml-6 text-left ${
                 format === "ordered" ? "list-decimal" : "list-disc"
               }`}
             >

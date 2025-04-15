@@ -5,6 +5,7 @@ import TextBlock from "@/components/TextBlock";
 import TextGrid from "@/components/TextGrid";
 
 const ComponentParser = ({ blocks }: any) => {
+  console.log("fffffffffffffffffffffffffffffffffffffffffffirst", blocks);
   return (
     <div>
       {blocks?.map((item: any) => {
