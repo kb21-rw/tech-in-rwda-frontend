@@ -1,5 +1,5 @@
 import { fetchEntitiesPath, fetchEntityBySlug } from "@/utils/api";
-import { notFound } from "next/navigation";
+import { notFound, redirect } from "next/navigation";
 import ComponentParser from "../cms/ComponentParser";
 
 export async function generateStaticParams() {
@@ -7,19 +7,19 @@ export async function generateStaticParams() {
     path: "pages",
     excluded: ["404", "resources", "contact"],
   });
-  console.log("paths 88888888888888888888888888888888888", paths);
   return paths.map((path: any) => ({
     id: path.params.slug,
   }));
 }
 
 export default async function ViewPage({ params }: { params: { id: string } }) {
+  console.log("paths 88888888888888888888888888888888888", params.id);
   try {
     const page = await fetchEntityBySlug({
       slug: params?.id === "" ? "about" : params?.id,
       path: "pages",
     });
-    console.log("=======================================", page);
+    if (!page) redirect("/not-found");
     return (
       <>
         {page?.map((section: any) => (

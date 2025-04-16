@@ -4,7 +4,7 @@ import SidedContent from "@/components/SidedContent";
 import TextBlock from "@/components/TextBlock";
 import TextGrid from "@/components/TextGrid";
 
-const ProjectComponentParser = ({ blocks }: any) => {
+const ComponentParser = ({ blocks }: any) => {
   console.log("fffffffffffffffffffffffffffffffffffffffffffirst", blocks);
   return (
     <div>
@@ -23,6 +23,8 @@ const ProjectComponentParser = ({ blocks }: any) => {
             return <ImageCardBlock {...item} />;
           case "blocks.left-and-right-contents":
             return <SidedContent {...item} />;
+          case "blocks.projects":
+            return <ComponentParser data={item} />;
           case "blocks.text-grid":
             return <TextGrid {...item} />;
           default:
@@ -33,4 +35,4 @@ const ProjectComponentParser = ({ blocks }: any) => {
   );
 };
 
-export default ProjectComponentParser;
+export default ComponentParser;

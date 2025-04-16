@@ -3,10 +3,10 @@
 import { useState } from "react";
 import { Logo } from "./Logo";
 import { MenuIcon } from "./Menu/Icon";
-import { NavbarData } from "@/types/SiteConfigApi";
+// import { NavbarData } from "@/types/SiteConfigApi";
 import { MenuItems } from "./Menu/Items";
 
-const Navbar = (data: NavbarData) => {
+const Navbar = (data: any) => {
   const { desktopLogo, mobileLogo } = data;
   const [isOpen, setIsOpen] = useState(false);
 
