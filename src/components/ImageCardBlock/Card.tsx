@@ -13,9 +13,7 @@ const ImageCard = ({ image, title, description }: ImageCardData) => {
         className="w-full lg:w-45 h-full object-cover"
       />
       <div className="font-mulish">
-        <h4 className="font-bold text-2xl">
-          {title}ffffffffffffffffffffffffffff
-        </h4>
+        <h4 className="font-bold text-2xl">{title}</h4>
         <RichText content={description} />
       </div>
     </div>
