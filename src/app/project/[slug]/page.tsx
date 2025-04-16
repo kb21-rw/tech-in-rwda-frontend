@@ -25,7 +25,6 @@ export default async function ViewPage({
     });
 
     if (!project) redirect("/not-found");
-    console.log("firstProject", project);
     return (
       <>
         <TextBlock

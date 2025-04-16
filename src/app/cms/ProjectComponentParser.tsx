@@ -5,7 +5,6 @@ import TextBlock from "@/components/TextBlock";
 import TextGrid from "@/components/TextGrid";
 
 const ProjectComponentParser = (props: any) => {
-  console.log("projectqqqqqqqqqqqqqqqqqqqqqqq", props);
   return (
     <div>
       {props.blocks?.map((item: any, index: number) => {
