@@ -27,7 +27,7 @@ const ProjectComponentParser = (props: any) => {
           case "blocks.projects":
             return <ImageCardGrid cards={item} />;
           case "blocks.text-block-list":
-            return <TextGrid {...item} />;
+            return <TextBlock {...item} />;
           default:
             return null;
         }

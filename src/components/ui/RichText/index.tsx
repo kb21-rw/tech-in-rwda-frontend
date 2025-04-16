@@ -65,7 +65,7 @@ const RichText = ({ content, colored = false }: any) => {
                 ) : (
                   <Link
                     key={id}
-                    href={"/"}
+                    href={url}
                     className="text-blue-600 underline hover:text-blue-800"
                     target="_blank"
                     rel="noopener noreferrer"
