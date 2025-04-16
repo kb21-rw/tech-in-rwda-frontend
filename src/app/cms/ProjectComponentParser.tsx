@@ -1,31 +1,32 @@
 import ImageCardBlock from "@/components/ImageCardBlock";
-// import ImageCardGrid from "@/components/ImageCardGrid";
+import ImageCardGrid from "@/components/ImageCardGrid";
 import SidedContent from "@/components/SidedContent";
 import TextBlock from "@/components/TextBlock";
 import TextGrid from "@/components/TextGrid";
 
-const ComponentParser = ({ blocks }: any) => {
-  console.log("fffffffffffffffffffffffffffffffffffffffffffirst", blocks);
+const ProjectComponentParser = (props: any) => {
+  console.log("projectqqqqqqqqqqqqqqqqqqqqqqq", props);
   return (
     <div>
-      {blocks?.map((item: any) => {
+      {props.blocks?.map((item: any, index: number) => {
         switch (item.__component) {
           case "blocks.title-and-description-block":
             return (
               <TextBlock
-                key={item.id}
-                title={item.title}
-                variant={item.title.variant}
-                description={item.description}
+                key={props.id + index}
+                title={props.title}
+                description={props.description}
               />
             );
           case "blocks.cards-block":
             return <ImageCardBlock {...item} />;
           case "blocks.left-and-right-contents":
             return <SidedContent {...item} />;
-          case "blocks.projects":
-            return <ComponentParser data={item} />;
           case "blocks.text-grid":
+            return <TextGrid {...item} />;
+          case "blocks.projects":
+            return <ImageCardGrid cards={item} />;
+          case "blocks.text-block-list":
             return <TextGrid {...item} />;
           default:
             return null;
@@ -35,4 +36,4 @@ const ComponentParser = ({ blocks }: any) => {
   );
 };
 
-export default ComponentParser;
+export default ProjectComponentParser;

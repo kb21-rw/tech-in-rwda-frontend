@@ -1,4 +1,8 @@
-import { fetchEntitiesPath, fetchEntityBySlug } from "@/utils/api";
+import {
+  fetchEntities,
+  fetchEntitiesPath,
+  fetchEntityBySlug,
+} from "@/utils/api";
 import { notFound, redirect } from "next/navigation";
 import ComponentParser from "../cms/ComponentParser";
 
@@ -12,13 +16,18 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ViewPage({ params }: { params: { id: string } }) {
-  console.log("paths 88888888888888888888888888888888888", params.id);
+export default async function ViewPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   try {
     const page = await fetchEntityBySlug({
-      slug: params?.id === "" ? "about" : params?.id,
+      slug: params?.slug,
       path: "pages",
     });
+    const projects = await fetchEntities({ path: "projects" });
+
     if (!page) redirect("/not-found");
     return (
       <>
@@ -26,6 +35,7 @@ export default async function ViewPage({ params }: { params: { id: string } }) {
           <ComponentParser
             key={section.id + section.__component}
             {...section}
+            projects={projects}
           />
         ))}
       </>

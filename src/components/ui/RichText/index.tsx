@@ -5,9 +5,9 @@ import { getTextSize } from "./TextSize";
 import Link from "next/link";
 import CodeText from "./CodeText";
 
-const RichText = ({ content }: any) => {
+const RichText = ({ content, colored = false }: any) => {
   return (
-    <div className="font-mulish text-primary text-base lg:text-2xl font-normal leading-5 lg:leading-7.53">
+    <div className="font-mulish  text-base xl:text-2xl font-normal leading-5 xl:leading-7.53">
       <BlocksRenderer
         content={content}
         blocks={{
@@ -32,7 +32,11 @@ const RichText = ({ content }: any) => {
               <p
                 className={`${
                   content[0].variant === "header"
-                    ? "font-normal text-sm lg:text-lg text-primary pb-3"
+                    ? `font-normal text-sm xl:text-lg ${
+                        colored
+                          ? "text-primary"
+                          : "text-white opacity-35 hover:opacity-100"
+                      } pb-3`
                     : "pb-4"
                 }`}
               >

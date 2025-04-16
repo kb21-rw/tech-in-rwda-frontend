@@ -1,45 +1,47 @@
 import ProjectComponentParser from "@/app/cms/ProjectComponentParser";
-import { fetchEntityBySlug } from "@/utils/api";
+import TextBlock from "@/components/TextBlock";
+import { fetchEntitiesPath, fetchEntityBySlug } from "@/utils/api";
+import { notFound, redirect } from "next/navigation";
 
-const Page = ({ project }: any) => {
-  return (
-    <>
-      <div className="flex flex-col gap-12.5 md:gap-25 pt-25">
-        {project.attributes.sections.map((section: any, index: number) => (
-          <ProjectComponentParser key={index} data={section} />
-        ))}
-      </div>
-    </>
-  );
-};
+export async function generateStaticParams() {
+  const paths = await fetchEntitiesPath({
+    path: "projects",
+    excluded: ["404", "resources", "contact"],
+  });
+  return paths.map((path: any) => ({
+    id: path.params.slug,
+  }));
+}
 
-export const getServerSideProps = async ({ params }: any) => {
+export default async function ViewPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
   try {
-    const [project] = await Promise.all([
-      fetchEntityBySlug({
-        slug: params.slug,
-        path: "/projects",
-      }),
-    ]);
-    return {
-      props: {
-        project,
-      },
-    };
+    const project = await fetchEntityBySlug({
+      slug: params?.slug,
+      path: "projects",
+    });
+
+    if (!project) redirect("/not-found");
+    console.log("firstProject", project);
+    return (
+      <>
+        <TextBlock
+          title={project[0].title}
+          description={project[0].description}
+        />
+        {project?.map((section: any) => (
+          <ProjectComponentParser
+            key={section.id + section.__component}
+            {...section}
+          />
+        ))}
+      </>
+    );
   } catch (error) {
     console.error("Error fetching data:", error);
-    return {
-      notFound: true,
-    };
+    notFound();
   }
-};
-
-// export const getStaticPaths = async ({ locales }: any) => {
-//   const paths = await getAllArticlesPaths({ locales });
-//   return {
-//     paths,
-//     fallback: 'blocking',
-//   };
-// };
-
-export default Page;
+}
