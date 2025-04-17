@@ -10,14 +10,7 @@ const ProjectComponentParser = ({ blocks, projects }: any) => {
       {blocks?.map((item: any) => {
         switch (item.__component) {
           case "blocks.title-and-description-block":
-            return (
-              <TextBlock
-                key={item.id}
-                title={item.title}
-                variant={item.title.variant}
-                description={item.description}
-              />
-            );
+            return <TextBlock {...item} />;
           case "blocks.cards-block":
             return <ImageCardBlock {...item} />;
           case "blocks.left-and-right-contents":

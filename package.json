@@ -12,6 +12,7 @@
     "@strapi/blocks-react-renderer": "^1.0.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "next": "15.1.7",
+    "nextjs-progressbar": "^0.0.16",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
