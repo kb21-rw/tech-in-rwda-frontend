@@ -9,7 +9,7 @@ import ComponentParser from "../cms/ComponentParser";
 export async function generateStaticParams() {
   const paths = await fetchEntitiesPath({
     path: "pages",
-    excluded: ["404", "resources", "contact"],
+    excluded: ["not-found", "resources", "contact"],
   });
   return paths.map((path: any) => ({
     id: path.params.slug,
@@ -30,7 +30,7 @@ export default async function ViewPage({
 
     if (!page) redirect("/not-found");
     return (
-      <div className="min-h-screen">
+      <div className="min-h-[80vh]">
         {page?.map((section: any) => (
           <ComponentParser
             key={section.id + section.__component}

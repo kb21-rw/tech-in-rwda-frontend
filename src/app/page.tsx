@@ -19,14 +19,8 @@ export default async function Home() {
 
   const data = homepage.data[0];
   return (
-    <div className="min-h-screen">
-      {homepage ? (
-        <>
-          <ComponentParser blocks={data.blocks} />
-        </>
-      ) : (
-        <p>Failed to load page content.</p>
-      )}
+    <div className="min-h-[80vh]">
+      {data && <ComponentParser blocks={data.blocks} />}
     </div>
   );
 }

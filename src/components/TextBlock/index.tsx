@@ -3,7 +3,6 @@ import Image from "next/image";
 import RichText from "../ui/RichText";
 
 const TextBlock = ({ title, description, image }: any) => {
-  console.log(title);
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
       {title && (

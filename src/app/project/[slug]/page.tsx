@@ -5,7 +5,7 @@ import { notFound, redirect } from "next/navigation";
 export async function generateStaticParams() {
   const paths = await fetchEntitiesPath({
     path: "projects",
-    excluded: ["404", "resources", "contact"],
+    excluded: ["not-found", "resources", "contact"],
   });
   return paths.map((path: any) => ({
     id: path.params.slug,
@@ -25,7 +25,7 @@ export default async function ViewPage({
 
     if (!project) redirect("/not-found");
     return (
-      <div className="min-h-screen">
+      <div className="min-h-[80vh]">
         {project?.map((section: any) => (
           <ProjectComponentParser
             key={section.id + section.__component}

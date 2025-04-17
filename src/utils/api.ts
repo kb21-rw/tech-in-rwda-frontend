@@ -5,8 +5,7 @@ export const fetchEntityBySlug = async ({ path, slug }: any) => {
 
   const entities = await res.json();
   const entity = entities?.data;
-
-  if (!entity) throw new Error("Entity not found");
+  if (!entity || !entity[0]) throw new Error("Entity not found");
   return entity;
 };
 export const fetchEntities = async ({ path }: any) => {
