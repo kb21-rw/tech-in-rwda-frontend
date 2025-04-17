@@ -38,7 +38,7 @@ const RichText = ({ content, colored = false }: any) => {
                           : "text-white opacity-35 hover:opacity-100"
                       } pb-3`
                     : "pb-4"
-                } text-left`}
+                } text-left text-primary`}
               >
                 {children}
               </p>
