@@ -7,16 +7,10 @@ import TextGrid from "@/components/TextGrid";
 const ProjectComponentParser = (props: any) => {
   return (
     <div>
-      {props.blocks?.map((item: any, index: number) => {
+      {props.blocks?.map((item: any) => {
         switch (item.__component) {
           case "blocks.title-and-description-block":
-            return (
-              <TextBlock
-                key={props.id + index}
-                title={props.title}
-                description={props.description}
-              />
-            );
+            return <TextBlock {...item} />;
           case "blocks.cards-block":
             return <ImageCardBlock {...item} />;
           case "blocks.left-and-right-contents":
@@ -25,8 +19,6 @@ const ProjectComponentParser = (props: any) => {
             return <TextGrid {...item} />;
           case "blocks.projects":
             return <ImageCardGrid cards={item} />;
-          case "blocks.text-block-list":
-            return <TextBlock {...item} />;
           default:
             return null;
         }

@@ -23,14 +23,14 @@ export default async function ViewPage({
 }) {
   try {
     const page = await fetchEntityBySlug({
-      slug: params?.slug,
+      slug: params.slug,
       path: "pages",
     });
     const projects = await fetchEntities({ path: "projects" });
 
     if (!page) redirect("/not-found");
     return (
-      <>
+      <div className="min-h-screen">
         {page?.map((section: any) => (
           <ComponentParser
             key={section.id + section.__component}
@@ -38,7 +38,7 @@ export default async function ViewPage({
             projects={projects}
           />
         ))}
-      </>
+      </div>
     );
   } catch (error) {
     console.error("Error fetching data:", error);

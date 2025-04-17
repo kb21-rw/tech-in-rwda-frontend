@@ -20,7 +20,7 @@ export default async function Home() {
 
   const data = homepage.data[0];
   return (
-    <div>
+    <div className="min-h-screen">
       {data.blocks.map((item: any, index: number) => (
         <div key={item.id + index}>
           {homepage ? (

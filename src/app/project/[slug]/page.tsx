@@ -1,5 +1,4 @@
 import ProjectComponentParser from "@/app/cms/ProjectComponentParser";
-import TextBlock from "@/components/TextBlock";
 import { fetchEntitiesPath, fetchEntityBySlug } from "@/utils/api";
 import { notFound, redirect } from "next/navigation";
 
@@ -20,24 +19,20 @@ export default async function ViewPage({
 }) {
   try {
     const project = await fetchEntityBySlug({
-      slug: params?.slug,
+      slug: params.slug,
       path: "projects",
     });
 
     if (!project) redirect("/not-found");
     return (
-      <>
-        <TextBlock
-          title={project[0].title}
-          description={project[0].description}
-        />
+      <div className="min-h-screen">
         {project?.map((section: any) => (
           <ProjectComponentParser
             key={section.id + section.__component}
             {...section}
           />
         ))}
-      </>
+      </div>
     );
   } catch (error) {
     console.error("Error fetching data:", error);
