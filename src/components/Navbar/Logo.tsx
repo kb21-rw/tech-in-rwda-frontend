@@ -13,7 +13,7 @@ export const Logo = ({ desktopLogo, mobileLogo, isOpen }: LogoProps) => {
     <Link href="/">
       <Image
         src={logo.url}
-        alt={logo.alt || "Logo"}
+        alt={logo.alternativeText || "Logo"}
         width={logo.width}
         height={46}
         className={`${isOpen ? "w-11.5 lg:w-28.5" : "lg:w-28.5"}`}

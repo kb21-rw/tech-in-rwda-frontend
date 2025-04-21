@@ -15,17 +15,20 @@ export async function generateMetadata() {
   };
 }
 
-export default async function RootLayout({ children }: { children: any }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const { data } = await getAllPageLinks();
   const { footer, header } = data;
 
   return (
     <html
       lang="en"
-      suppressHydrationWarning
       className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
-      <body className="content-wrapper">
+      <body className="content-wrapper" suppressHydrationWarning={true}>
         <Navbar {...header} />
         {children}
         <Footer {...footer} />

@@ -47,7 +47,7 @@ const RichText = ({ content, colored = false }: any) => {
 
           list: ({ children, format }) => (
             <ul
-              className={`ml-6 text-left ${
+              className={`ml-6 text-left text-primary ${
                 format === "ordered" ? "list-decimal" : "list-disc"
               }`}
             >

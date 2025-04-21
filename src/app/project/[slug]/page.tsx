@@ -5,10 +5,10 @@ import { notFound, redirect } from "next/navigation";
 export async function generateStaticParams() {
   const paths = await fetchEntitiesPath({
     path: "projects",
-    excluded: ["not-found", "resources", "contact"],
+    excluded: ["not-found", "contact"],
   });
   return paths.map((path: any) => ({
-    id: path.params.slug,
+    slug: path.params.slug,
   }));
 }
 
@@ -17,9 +17,10 @@ export default async function ViewPage({
 }: {
   params: { slug: string };
 }) {
+  const { slug } = await params;
   try {
     const project = await fetchEntityBySlug({
-      slug: params.slug,
+      slug: slug,
       path: "projects",
     });
 

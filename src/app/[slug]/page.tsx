@@ -9,10 +9,10 @@ import ComponentParser from "../cms/ComponentParser";
 export async function generateStaticParams() {
   const paths = await fetchEntitiesPath({
     path: "pages",
-    excluded: ["not-found", "resources", "contact"],
+    excluded: ["not-found", "contact"],
   });
   return paths.map((path: any) => ({
-    id: path.params.slug,
+    slug: path.params.slug,
   }));
 }
 
@@ -21,9 +21,10 @@ export default async function ViewPage({
 }: {
   params: { slug: string };
 }) {
+  const { slug } = await params;
   try {
     const page = await fetchEntityBySlug({
-      slug: params.slug,
+      slug: slug,
       path: "pages",
     });
     const projects = await fetchEntities({ path: "projects" });
