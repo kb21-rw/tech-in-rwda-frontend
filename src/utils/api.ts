@@ -32,7 +32,11 @@ export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
   return paths;
 };
 
-export const fetchSiteLinks = async ({ path }: any) => {
+export const fetchSiteLinks = async (path: any) => {
+  console.log(
+    "vvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv",
+    `${process.env.BASE_URL}${path}`
+  );
   const res = await fetch(`${process.env.BASE_URL}${path}`);
 
   if (!res.ok) throw new Error("Failed to fetch data");

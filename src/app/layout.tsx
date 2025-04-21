@@ -1,22 +1,24 @@
-import Navbar from "@/components/Navbar";
 import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import siteConfigData from "../../public/data/siteConfig.json";
 import Footer from "@/components/Footer";
+import getAllPageLinks from "./api/siteConfig";
 
-const { favicon, footer, header } = siteConfigData.data;
+export async function generateMetadata() {
+  const { data } = await getAllPageLinks();
+  const faviconUrl = data.favicon?.[0]?.url;
 
-export const metadata = {
-  icons: {
-    icon: `${favicon[0].url}`,
-  },
-};
+  return {
+    icons: {
+      icon: faviconUrl,
+    },
+  };
+}
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default async function RootLayout({ children }: { children: any }) {
+  const { data } = await getAllPageLinks();
+  const { footer, header } = data;
+
   return (
     <html
       lang="en"
