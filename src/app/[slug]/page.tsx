@@ -3,7 +3,7 @@ import {
   fetchEntitiesPath,
   fetchEntityBySlug,
 } from "@/utils/api";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 import ComponentParser from "../cms/ComponentParser";
 
 export async function generateStaticParams() {
@@ -29,7 +29,10 @@ export default async function ViewPage({
     });
     const projects = await fetchEntities({ path: "projects" });
 
-    if (!page) redirect("/not-found");
+    if (!page) {
+      notFound();
+    }
+
     return (
       <div className="min-h-[80vh]">
         {page?.map((section: any) => (

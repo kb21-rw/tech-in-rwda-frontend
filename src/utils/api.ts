@@ -1,21 +1,31 @@
 export const fetchEntityBySlug = async ({ path, slug }: any) => {
-  const res = await fetch(
-    `${process.env.BASE_URL}${path}?filters[slug][$eq]=${slug}`
-  );
+  try {
+    const res = await fetch(
+      `${process.env.BASE_URL}${path}?filters[slug][$eq]=${slug}`
+    );
 
-  const entities = await res.json();
-  const entity = entities?.data;
-  if (!entity || !entity[0]) throw new Error("Entity not found");
-  return entity;
+    const entities = await res.json();
+    const entity = entities?.data;
+    if (!entity || !entity[0]) throw Error("Entity not found");
+    return entity;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 };
 export const fetchEntities = async ({ path }: any) => {
-  const res = await fetch(`${process.env.BASE_URL}${path}`);
+  try {
+    const res = await fetch(`${process.env.BASE_URL}${path}`);
 
-  const entities = await res.json();
-  const entity = entities?.data;
+    const entities = await res.json();
+    const entity = entities?.data;
 
-  if (!entity) throw new Error("Entity not found");
-  return entity;
+    if (!entity) throw Error("Entity not found");
+    return entity;
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    throw error;
+  }
 };
 export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
   const res = await fetch(`${process.env.BASE_URL}${path}`);

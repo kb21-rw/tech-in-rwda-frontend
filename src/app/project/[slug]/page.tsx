@@ -1,6 +1,6 @@
 import ProjectComponentParser from "@/app/cms/ProjectComponentParser";
 import { fetchEntitiesPath, fetchEntityBySlug } from "@/utils/api";
-import { notFound, redirect } from "next/navigation";
+import { notFound } from "next/navigation";
 
 export async function generateStaticParams() {
   const paths = await fetchEntitiesPath({
@@ -24,7 +24,9 @@ export default async function ViewPage({
       path: "projects",
     });
 
-    if (!project) redirect("/not-found");
+    if (!project) {
+      notFound();
+    }
     return (
       <div className="min-h-[80vh]">
         {project?.map((section: any) => (
