@@ -7,7 +7,7 @@ import { Component, ComponentParserProps } from "@/types/ComponentParser";
 
 const ComponentParser = ({ blocks, projects }: ComponentParserProps) => {
   return (
-    <div>
+    <>
       {blocks?.map((item: Component & { id?: number }, index: number) => {
         const key = `${item.id + item.__component}-${index}`;
         switch (item.__component) {
@@ -25,7 +25,7 @@ const ComponentParser = ({ blocks, projects }: ComponentParserProps) => {
             return null;
         }
       })}
-    </div>
+    </>
   );
 };
 
