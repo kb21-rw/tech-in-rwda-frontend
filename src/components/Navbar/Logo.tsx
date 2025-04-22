@@ -8,7 +8,7 @@ interface LogoProps extends Omit<Header, "links"> {
 
 export const Logo = ({ desktopLogo, mobileLogo, isOpen }: LogoProps) => {
   const logo = isOpen && window.innerWidth < 1024 ? mobileLogo : desktopLogo;
-  console.log(logo);
+
   return (
     <Link href="/">
       <Image
