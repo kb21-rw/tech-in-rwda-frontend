@@ -2,7 +2,8 @@ import { HeaderData } from "@/types/TextBlock";
 import Image from "next/image";
 import RichText from "../ui/RichText";
 
-const TextBlock = ({ title, description, image }: HeaderData) => {
+const TextBlock = ({ title, description, align, image }: HeaderData) => {
+  // console.log(description);
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
       {title && (
@@ -30,7 +31,9 @@ const TextBlock = ({ title, description, image }: HeaderData) => {
           />
         </div>
       )}
-      <div>{description && <RichText content={description} />}</div>
+      <div>
+        {description && <RichText content={description} aligned={align} />}
+      </div>
     </div>
   );
 };

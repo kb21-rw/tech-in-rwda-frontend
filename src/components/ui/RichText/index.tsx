@@ -1,11 +1,21 @@
 "use client";
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { getTextSize } from "./TextSize";
+import { getTextAlign, getTextSize } from "./helper";
 import Link from "next/link";
 import CodeText from "./CodeText";
+import { Align } from "@/types/TextBlock";
 
-const RichText = ({ content, colored = false }: any) => {
+type RichTextProps = {
+  content: any;
+  colored?: boolean;
+  aligned?: Align;
+};
+const RichText = ({
+  content,
+  colored = false,
+  aligned = "left",
+}: RichTextProps) => {
   return (
     <div className="font-mulish  text-base xl:text-2xl font-normal leading-5 xl:leading-7.53">
       <BlocksRenderer
@@ -38,7 +48,7 @@ const RichText = ({ content, colored = false }: any) => {
                           : "text-primary"
                       } pb-3`
                     : "pb-4"
-                } text-left`}
+                } ${getTextAlign(aligned)}`}
               >
                 {children}
               </p>

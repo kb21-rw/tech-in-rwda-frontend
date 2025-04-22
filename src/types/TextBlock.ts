@@ -1,5 +1,6 @@
 import { Image } from "./image";
 
+export type Align = "left" | "right" | "center";
 export type HeaderTitle = {
   id: number;
   text: string;
@@ -9,6 +10,7 @@ export type HeaderTitle = {
 export type HeaderData = {
   title: HeaderTitle;
   description?: string;
+  align: Align;
   image: Image | null;
 };
 
