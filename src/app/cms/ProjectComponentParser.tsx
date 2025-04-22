@@ -7,16 +7,17 @@ import { Component, ComponentParserProps } from "@/types/ComponentParser";
 const ProjectComponentParser = (props: ComponentParserProps) => {
   return (
     <>
-      {props.blocks?.map((item: Component) => {
+      {props.blocks?.map((item: Component & { id?: number }, index: number) => {
+        const key = `${item.id + item.__component}-${index}`;
         switch (item.__component) {
           case "blocks.title-and-description-block":
-            return <TextBlock {...item} />;
+            return <TextBlock key={key} {...item} />;
           case "blocks.cards-block":
-            return <ImageCardBlock {...item} />;
+            return <ImageCardBlock key={key} {...item} />;
           case "blocks.left-and-right-contents":
-            return <SidedContent {...item} />;
+            return <SidedContent key={key} {...item} />;
           case "blocks.text-grid":
-            return <TextGrid {...item} />;
+            return <TextGrid key={key} {...item} />;
           default:
             return null;
         }

@@ -21,7 +21,7 @@ export default async function ViewPage({
 }: {
   params: { slug: string };
 }) {
-  const { slug } = await params;
+  const { slug } = await Promise.resolve(params);
   try {
     const page = await fetchEntityBySlug({
       slug: slug,
