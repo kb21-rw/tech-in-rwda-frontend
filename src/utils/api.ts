@@ -1,3 +1,18 @@
+export const fetchEntity = async ({
+  path,
+  slug,
+}: {
+  path: string;
+  slug: string;
+}) => {
+  const res = await fetch(
+    `${process.env.BASE_URL}${path}?filters[slug][$eq]=${slug}`
+  );
+
+  if (!res.ok) throw new Error("Failed to fetch data");
+
+  return res.json();
+};
 export const fetchEntityBySlug = async ({ path, slug }: any) => {
   try {
     const res = await fetch(

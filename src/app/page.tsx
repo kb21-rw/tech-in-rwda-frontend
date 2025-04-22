@@ -1,26 +1,26 @@
 import ComponentParser from "@/app/cms/ComponentParser";
-
-const fetchEntity = async ({ path }: { path: string }) => {
-  const res = await fetch(`${process.env.BASE_URL}${path}`);
-
-  if (!res.ok) throw new Error("Failed to fetch data");
-
-  return res.json();
-};
+import { fetchEntity } from "@/utils/api";
+import { notFound } from "next/navigation";
 
 export default async function Home() {
-  let homepage;
   try {
-    homepage = await fetchEntity({ path: "pages" });
+    const { data } = await fetchEntity({ path: "pages", slug: "about" });
+    const homepage = data[0];
+    if (!homepage) {
+      return notFound();
+    }
+    console.log(homepage.data);
+    return (
+      <div className="min-h-[80vh]">
+        <ComponentParser blocks={homepage.blocks} />
+      </div>
+    );
   } catch (error) {
     console.error("Error fetching data:", error);
-    homepage = null;
+    return (
+      <div className="min-h-[80vh] flex items-center justify-center text-red-500">
+        Failed to load content.
+      </div>
+    );
   }
-
-  const data = homepage.data[0];
-  return (
-    <div className="min-h-[80vh]">
-      {data && <ComponentParser blocks={data.blocks} />}
-    </div>
-  );
 }
