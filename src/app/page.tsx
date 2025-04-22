@@ -1,18 +1,18 @@
 import ComponentParser from "@/app/cms/ComponentParser";
-import { fetchEntity } from "@/utils/api";
+import { fetchEntityBySlug } from "@/utils/api";
 import { notFound } from "next/navigation";
 
 export default async function Home() {
   try {
-    const { data } = await fetchEntity({ path: "pages", slug: "about" });
-    const homepage = data[0];
-    if (!homepage) {
+    const homepage = await fetchEntityBySlug({ path: "pages", slug: "about" });
+
+    if (!homepage || homepage.length === 0) {
       return notFound();
     }
-    console.log(homepage.data);
+    console.log(homepage);
     return (
       <div className="min-h-[80vh]">
-        <ComponentParser blocks={homepage.blocks} />
+        <ComponentParser blocks={homepage[0].blocks} />
       </div>
     );
   } catch (error) {
