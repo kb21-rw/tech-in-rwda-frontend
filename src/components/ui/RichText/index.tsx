@@ -38,7 +38,7 @@ const RichText = ({ content, colored = false }: any) => {
                           : "text-primary"
                       } pb-3`
                     : "pb-4"
-                } text-left text-primary`}
+                } text-left`}
               >
                 {children}
               </p>
