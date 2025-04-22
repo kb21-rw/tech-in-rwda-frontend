@@ -9,7 +9,6 @@ export default async function Home() {
     if (!homepage || homepage.length === 0) {
       return notFound();
     }
-    console.log(homepage);
     return (
       <div className="min-h-[80vh]">
         <ComponentParser blocks={homepage[0].blocks} />
