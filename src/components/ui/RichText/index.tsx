@@ -34,8 +34,8 @@ const RichText = ({ content, colored = false }: any) => {
                   content[0].variant === "header"
                     ? `font-normal text-sm xl:text-lg ${
                         colored
-                          ? "text-primary"
-                          : "text-white opacity-35 hover:opacity-100"
+                          ? "text-white opacity-35 hover:opacity-100"
+                          : "text-primary"
                       } pb-3`
                     : "pb-4"
                 } text-left text-primary`}

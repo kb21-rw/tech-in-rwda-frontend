@@ -30,9 +30,7 @@ const TextBlock = ({ title, description, image }: HeaderData) => {
           />
         </div>
       )}
-      <div className="px-0 lg:px-43.75">
-        {description && <RichText content={description} />}
-      </div>
+      <div>{description && <RichText content={description} />}</div>
     </div>
   );
 };
