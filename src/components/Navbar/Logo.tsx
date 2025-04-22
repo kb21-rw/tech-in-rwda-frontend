@@ -8,15 +8,15 @@ interface LogoProps extends Omit<Header, "links"> {
 
 export const Logo = ({ desktopLogo, mobileLogo, isOpen }: LogoProps) => {
   const logo = isOpen && window.innerWidth < 1024 ? mobileLogo : desktopLogo;
-
+  console.log(logo);
   return (
     <Link href="/">
       <Image
         src={logo.url}
-        alt={logo.alternativeText || "Logo"}
+        alt={logo.alternativeText || logo.name || "Logo"}
         width={logo.width}
-        height={46}
-        className={`${isOpen ? "w-11.5 lg:w-28.5" : "lg:w-28.5"}`}
+        height={logo.height}
+        className={`${isOpen ? "w-11.5 lg:w-28.5" : "lg:w-36.5"}`}
       />
     </Link>
   );

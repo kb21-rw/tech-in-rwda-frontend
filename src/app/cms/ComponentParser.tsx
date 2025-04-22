@@ -6,7 +6,6 @@ import TextGrid from "@/components/TextGrid";
 import { Component, ComponentParserProps } from "@/types/ComponentParser";
 
 const ComponentParser = ({ blocks, projects }: ComponentParserProps) => {
-  console.log(blocks);
   return (
     <>
       {blocks?.map((item: Component & { id?: number }, index: number) => {

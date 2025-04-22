@@ -3,6 +3,7 @@ export type Image = {
   alternativeText: string;
   width: number;
   height: number;
+  name?: string;
 };
 
 export type ImageTypes = {
