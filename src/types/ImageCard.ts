@@ -1,13 +1,18 @@
-// import { ImageData } from "./image";
+import { Image } from "./image";
 
 export type ImageCardType = {
   id: number;
   title: string;
   description: string;
   slug: string;
-  image: any;
+  image: Image;
 };
 
 export type ImageCardData = {
   cards: ImageCardType[];
+};
+
+export type ImageCardBlockData = ImageCardData & {
+  __component: "blocks.cards-block";
+  id: number;
 };

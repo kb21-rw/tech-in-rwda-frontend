@@ -3,11 +3,12 @@ import ImageCardGrid from "@/components/ImageCardGrid";
 import SidedContent from "@/components/SidedContent";
 import TextBlock from "@/components/TextBlock";
 import TextGrid from "@/components/TextGrid";
+import { Component, ComponentParserProps } from "@/types/ComponentParser";
 
-const ProjectComponentParser = ({ blocks, projects }: any) => {
+const ComponentParser = ({ blocks, projects }: ComponentParserProps) => {
   return (
     <div>
-      {blocks?.map((item: any) => {
+      {blocks?.map((item: Component) => {
         switch (item.__component) {
           case "blocks.title-and-description-block":
             return <TextBlock {...item} />;
@@ -27,4 +28,4 @@ const ProjectComponentParser = ({ blocks, projects }: any) => {
   );
 };
 
-export default ProjectComponentParser;
+export default ComponentParser;

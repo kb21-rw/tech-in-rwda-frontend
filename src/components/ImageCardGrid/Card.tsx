@@ -1,8 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import RichText from "../ui/RichText";
+import { ImageCardType } from "@/types/ImageCard";
 
-const ImageCard = ({ title, description, slug, image }: any) => {
+const ImageCard = ({
+  title,
+  description,
+  slug,
+  image,
+}: Omit<ImageCardType, "id">) => {
   return (
     <div className="relative">
       <Link href={"/project/" + slug}>
