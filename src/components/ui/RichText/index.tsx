@@ -11,11 +11,7 @@ type RichTextProps = {
   colored?: boolean;
   aligned?: Align;
 };
-const RichText = ({
-  content,
-  colored = false,
-  aligned = "left",
-}: RichTextProps) => {
+const RichText = ({ content, colored = false, aligned }: RichTextProps) => {
   return (
     <div className="font-mulish  text-base xl:text-2xl font-normal leading-5 xl:leading-7.53">
       <BlocksRenderer
@@ -48,7 +44,7 @@ const RichText = ({
                           : "text-primary"
                       } pb-3`
                     : "pb-4"
-                } ${getTextAlign(aligned)}`}
+                } ${aligned && getTextAlign(aligned)}`}
               >
                 {children}
               </p>
