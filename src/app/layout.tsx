@@ -1,30 +1,37 @@
-import Navbar from "@/components/Navbar";
 import { arvo, avenir, comfortaa, mulish, roboto } from "../../public/fonts";
+import Navbar from "@/components/Navbar";
 import "./globals.css";
-import siteConfigData from "../../public/data/siteConfig.json";
 import Footer from "@/components/Footer";
+import getAllPageLinks from "./api/siteConfig";
 
-const { favicon, footer, header } = siteConfigData.data;
+export async function generateMetadata() {
+  const { data } = await getAllPageLinks();
+  const faviconUrl = data.favicon?.[0]?.url;
 
-export const metadata = {
-  icons: {
-    icon: `${favicon[0].url}`,
-  },
-};
+  return {
+    icons: {
+      icon: faviconUrl,
+    },
+  };
+}
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
+  const { data } = await getAllPageLinks();
+  const { footer, header } = data;
+
   return (
     <html
       lang="en"
       className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
-      <body className="content-wrapper">
+      <body className="content-wrapper" suppressHydrationWarning={true}>
         <Navbar {...header} />
-        {children} <Footer {...footer} />
+        {children}
+        <Footer {...footer} />
       </body>
     </html>
   );

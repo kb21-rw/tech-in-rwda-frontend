@@ -2,12 +2,14 @@ import { Image } from "./image";
 
 export type ImageCardData = {
   id: number;
-  description: string;
+  name: string;
+  documentId?: string;
   title: string;
+  description: string;
   image: Image;
 };
 
-export type ImageCardBlockData = {
+export type ImageCardBlock = {
   id?: number;
   documentId?: string;
   title?: string;
@@ -16,4 +18,9 @@ export type ImageCardBlockData = {
   updatedAt?: string;
   publishedAt?: string;
   contributors: ImageCardData[];
+};
+export type ImageCardBlockData = ImageCardData & {
+  __component: "blocks.cards-block";
+  id: number;
+  cards: ImageCardData[];
 };

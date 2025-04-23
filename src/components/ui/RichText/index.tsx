@@ -1,13 +1,19 @@
 "use client";
 
 import { BlocksRenderer } from "@strapi/blocks-react-renderer";
-import { getTextSize } from "./TextSize";
+import { getTextAlign, getTextSize } from "./helper";
 import Link from "next/link";
 import CodeText from "./CodeText";
+import { Align } from "@/types/TextBlock";
 
-const RichText = ({ content }: any) => {
+type RichTextProps = {
+  content: any;
+  colored?: boolean;
+  aligned?: Align;
+};
+const RichText = ({ content, colored = false, aligned }: RichTextProps) => {
   return (
-    <div className="font-mulish text-primary text-base lg:text-2xl font-normal leading-5 lg:leading-7.53">
+    <div className="font-mulish  text-base xl:text-2xl font-normal leading-5 xl:leading-7.53">
       <BlocksRenderer
         content={content}
         blocks={{
@@ -32,9 +38,13 @@ const RichText = ({ content }: any) => {
               <p
                 className={`${
                   content[0].variant === "header"
-                    ? "font-normal text-sm lg:text-lg text-primary pb-3"
-                    : "pb-4 text-center lg:text-start"
-                }`}
+                    ? `font-normal text-sm xl:text-lg ${
+                        colored
+                          ? "text-white opacity-35 hover:opacity-100"
+                          : "text-primary"
+                      } pb-3`
+                    : "pb-4"
+                } ${aligned && getTextAlign(aligned)}`}
               >
                 {children}
               </p>
@@ -43,7 +53,7 @@ const RichText = ({ content }: any) => {
 
           list: ({ children, format }) => (
             <ul
-              className={`ml-6 ${
+              className={`ml-6 text-left text-primary ${
                 format === "ordered" ? "list-decimal" : "list-disc"
               }`}
             >
@@ -61,7 +71,7 @@ const RichText = ({ content }: any) => {
                 ) : (
                   <Link
                     key={id}
-                    href={"/"}
+                    href={url}
                     className="text-blue-600 underline hover:text-blue-800"
                     target="_blank"
                     rel="noopener noreferrer"
