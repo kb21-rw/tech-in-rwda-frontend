@@ -2,7 +2,7 @@ import { Image } from "./image";
 
 export type Align = "left" | "right" | "center";
 export type HeaderTitle = {
-  id: number;
+  id?: number;
   text: string;
   variant?: string;
 };
@@ -10,8 +10,8 @@ export type HeaderTitle = {
 export type HeaderData = {
   title: HeaderTitle;
   description?: string;
-  align: Align;
-  image: Image | null;
+  align?: Align;
+  image?: Image | null;
 };
 
 export type TextBlockItem = {
