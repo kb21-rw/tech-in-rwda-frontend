@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^4.4.1",
     "@strapi/blocks-react-renderer": "^1.0.2",
     "@tailwindcss/line-clamp": "^0.4.4",
     "next": "15.1.7",
