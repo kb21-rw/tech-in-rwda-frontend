@@ -7,9 +7,9 @@ const ImageCard = ({ image, title, description }: ImageCardData) => {
     <div className="flex-col lg:flex-row flex gap-7.5 lg:gap-10">
       <Image
         src={image.url}
-        alt={image.alternativeText || "members"}
-        width={image.width}
-        height={image.height}
+        alt={"members"}
+        width={1000}
+        height={1000}
         className="w-full lg:w-45 h-full object-cover"
       />
       <div className="font-mulish">

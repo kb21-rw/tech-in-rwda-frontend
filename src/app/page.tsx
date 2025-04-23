@@ -1,15 +1,25 @@
-import TextBlock from "@/components/TextBlock";
-import RichText from "@/components/ui/RichText";
-import { data } from "../../public/data/homePageData.json";
+import ComponentParser from "@/app/cms/ComponentParser";
+import { fetchEntityBySlug } from "@/utils/api";
+import { notFound } from "next/navigation";
 
-export default function Home() {
-  const { description, title } = data;
-  return (
-    <div>
-      <h1 className="font-avenir">
-        <TextBlock title={title} />
-      </h1>
-      <RichText content={description} />
-    </div>
-  );
+export default async function Home() {
+  try {
+    const homepage = await fetchEntityBySlug({ path: "pages", slug: "about" });
+
+    if (!homepage || homepage.length === 0) {
+      return notFound();
+    }
+    return (
+      <div className="min-h-[80vh]">
+        <ComponentParser blocks={homepage[0].blocks} />
+      </div>
+    );
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return (
+      <div className="min-h-[80vh] flex items-center justify-center text-red-500">
+        Failed to load content.
+      </div>
+    );
+  }
 }
