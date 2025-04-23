@@ -38,13 +38,13 @@ const RichText = ({ content, colored = false, aligned }: RichTextProps) => {
               <p
                 className={`${
                   content[0].variant === "header"
-                    ? `font-normal text-sm xl:text-lg ${
-                        colored
-                          ? "text-white opacity-35 hover:opacity-100"
-                          : "text-primary"
-                      } pb-3`
+                    ? `font-normal text-sm xl:text-lg pb-3`
                     : "pb-4"
-                } ${aligned && getTextAlign(aligned)}`}
+                } ${
+                  colored
+                    ? "text-white opacity-35 hover:opacity-100"
+                    : "text-primary"
+                }  ${aligned && getTextAlign(aligned)}`}
               >
                 {children}
               </p>

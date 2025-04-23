@@ -16,12 +16,12 @@ export const getTextSize = (level: number) => {
 export const getTextAlign = (align: Align) => {
   switch (align) {
     case "left":
-      return "text-primary text-center md:text-left";
+      return "text-center md:text-left";
     case "right":
-      return "text-primary text-center md:text-right";
+      return "text-center md:text-right";
     case "center":
-      return "text-primary text-center";
+      return "text-center";
     default:
-      return "text-primary text-left";
+      return "text-left";
   }
 };
