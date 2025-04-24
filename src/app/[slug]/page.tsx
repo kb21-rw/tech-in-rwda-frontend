@@ -16,14 +16,14 @@ export async function generateStaticParams() {
   }));
 }
 
-interface PageProps {
-  params: {
-    slug: string;
-  };
-}
-
-export default async function ViewPage({ params }: PageProps) {
-  const { slug } = await Promise.resolve(params);
+export default async function ViewPage({
+  params,
+}: {
+  params: { slug: string }
+}) {
+  const resolvedParams = await Promise.resolve(params);
+  const { slug } = resolvedParams;
+  
   try {
     const page = await fetchEntityBySlug({
       slug: slug,
