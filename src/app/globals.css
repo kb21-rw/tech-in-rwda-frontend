@@ -1,0 +1,20 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    @apply font-avenir max-w-screen-2xl
+}
+
+.content-wrapper {
+    @apply w-[85.5%] lg:w-[85%] mx-auto
+}
+
+code {
+    font-family: "Fira Code", monospace;
+}
+
+.custom-list li::before {
+    content: "•";
+    @apply text-3xl text-secondary mr-3
+}
