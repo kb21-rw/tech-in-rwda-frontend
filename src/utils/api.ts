@@ -1,7 +1,10 @@
 export const fetchEntityBySlug = async ({ path, slug }: any) => {
   try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+
     const res = await fetch(
-      `${process.env.BASE_URL}${path}?filters[slug][$eq]=${slug}`
+      `${baseUrl}${path}?filters[slug][$eq]=${slug}`
     );
 
     const entities = await res.json();
@@ -13,9 +16,13 @@ export const fetchEntityBySlug = async ({ path, slug }: any) => {
     throw error;
   }
 };
+
 export const fetchEntities = async ({ path }: any) => {
   try {
-    const res = await fetch(`${process.env.BASE_URL}${path}`);
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+
+    const res = await fetch(`${baseUrl}${path}`);
 
     const entities = await res.json();
     const entity = entities?.data;
@@ -27,23 +34,40 @@ export const fetchEntities = async ({ path }: any) => {
     throw error;
   }
 };
+
 export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
-  const res = await fetch(`${process.env.BASE_URL}${path}`);
-  const entities = await res.json();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
 
-  const paths: { locale: string; params: { slug: string } }[] = [];
-  const list = entities?.data
-    ?.filter((page: any) => !excluded.includes(page.slug))
-    ?.map((page: any) => ({
-      params: { slug: String(page.slug) },
-    }));
-  paths.push(...list);
+    const res = await fetch(`${baseUrl}${path}`);
+    const entities = await res.json();
 
-  return paths;
+    const paths: { locale: string; params: { slug: string } }[] = [];
+    const list = entities?.data
+      ?.filter((page: any) => !excluded.includes(page.slug))
+      ?.map((page: any) => ({
+        params: { slug: String(page.slug) },
+      }));
+    paths.push(...list);
+
+    return paths;
+  } catch (error) {
+    console.error("Error fetching paths:", error);
+    throw error;
+  }
 };
 
 export const fetchSiteLinks = async (path: any) => {
-  const res = await fetch(`${process.env.BASE_URL}${path}`);
-  if (!res.ok) throw new Error("Failed to fetch data");
-  return res.json();
+  try {
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+
+    const res = await fetch(`${baseUrl}${path}`);
+    if (!res.ok) throw new Error("Failed to fetch data");
+    return res.json();
+  } catch (error) {
+    console.error("Error fetching site links:", error);
+    throw error;
+  }
 };
