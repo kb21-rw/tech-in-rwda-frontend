@@ -20,10 +20,9 @@ interface PageProps {
   params: {
     slug: string;
   };
-  searchParams: { [key: string]: string | string[] | undefined };
 }
 
-export default async function ViewPage({ params, searchParams }: PageProps) {
+export default async function ViewPage({ params }: PageProps) {
   const { slug } = await Promise.resolve(params);
   try {
     const page = await fetchEntityBySlug({
