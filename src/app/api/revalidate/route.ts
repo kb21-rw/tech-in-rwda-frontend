@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server'
 
 export async function POST(request: NextRequest) {
   try {
-    // Verify the webhook secret if needed
+
     const secret = request.headers.get('x-webhook-secret')
     const expectedSecret = process.env.NEXT_PUBLIC_WEBHOOK_SECRET
     console.log('Received secret:', secret)
@@ -15,12 +15,13 @@ export async function POST(request: NextRequest) {
     const timestamp = new Date().toISOString()
     console.log(`[${timestamp}] Starting revalidation...`)
 
-    // Revalidate all the necessary paths
+   
     const paths = ['/', '/projects', '/contact', '/pages', '/[slug]']
     for (const path of paths) {
       console.log(`[${timestamp}] Revalidating path: ${path}`)
       revalidatePath(path)
     }
+
 
     console.log(`[${timestamp}] Revalidation completed successfully`)
 
