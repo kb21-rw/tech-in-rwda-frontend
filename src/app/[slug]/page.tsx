@@ -16,12 +16,13 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ViewPage({
-  params,
-}: {
-  params: { slug: string }
-}) {
-  const resolvedParams = await Promise.resolve(params);
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams?: { [key: string]: string | string[] | undefined };
+};
+
+export default async function ViewPage({ params }: Props) {
+  const resolvedParams = await params;
   const { slug } = resolvedParams;
   
   try {
