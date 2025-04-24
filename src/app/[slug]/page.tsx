@@ -18,7 +18,7 @@ export async function generateStaticParams() {
 
 type Props = {
   params: Promise<{ slug: string }>;
-  searchParams?: { [key: string]: string | string[] | undefined };
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
 };
 
 export default async function ViewPage({ params }: Props) {
