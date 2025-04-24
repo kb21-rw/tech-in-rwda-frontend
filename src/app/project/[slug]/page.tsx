@@ -12,12 +12,15 @@ export async function generateStaticParams() {
   }));
 }
 
-export default async function ViewPage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const { slug } = await Promise.resolve(params);
+type Props = {
+  params: Promise<{ slug: string }>;
+  searchParams?: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function ViewPage({ params }: Props) {
+  const resolvedParams = await params;
+  const { slug } = resolvedParams;
+  
   try {
     const project = await fetchEntityBySlug({
       slug: slug,
