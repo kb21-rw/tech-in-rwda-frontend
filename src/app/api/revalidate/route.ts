@@ -15,7 +15,6 @@ export async function POST(request: NextRequest) {
     const timestamp = new Date().toISOString()
     console.log(`[${timestamp}] Starting revalidation...`)
 
-    // Revalidate all the necessary paths
     const paths = ['/', '/projects', '/contact', '/pages', '/[slug]']
     for (const path of paths) {
       console.log(`[${timestamp}] Revalidating path: ${path}`)
