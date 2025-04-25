@@ -1,11 +1,10 @@
 export const fetchEntityBySlug = async ({ path, slug }: any) => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+    const baseUrl = process.env.BASE_URL;
+    if (!baseUrl)
+      throw new Error("BASE_URL environment variable is not defined");
 
-    const res = await fetch(
-      `${baseUrl}${path}?filters[slug][$eq]=${slug}`
-    );
+    const res = await fetch(`${baseUrl}${path}?filters[slug][$eq]=${slug}`);
 
     const entities = await res.json();
     const entity = entities?.data;
@@ -19,8 +18,9 @@ export const fetchEntityBySlug = async ({ path, slug }: any) => {
 
 export const fetchEntities = async ({ path }: any) => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+    const baseUrl = process.env.BASE_URL;
+    if (!baseUrl)
+      throw new Error("BASE_URL environment variable is not defined");
 
     const res = await fetch(`${baseUrl}${path}`);
 
@@ -37,8 +37,9 @@ export const fetchEntities = async ({ path }: any) => {
 
 export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+    const baseUrl = process.env.BASE_URL;
+    if (!baseUrl)
+      throw new Error("BASE_URL environment variable is not defined");
 
     const res = await fetch(`${baseUrl}${path}`);
     const entities = await res.json();
@@ -60,8 +61,9 @@ export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
 
 export const fetchSiteLinks = async (path: any) => {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
-    if (!baseUrl) throw new Error('BASE_URL environment variable is not defined');
+    const baseUrl = process.env.BASE_URL;
+    if (!baseUrl)
+      throw new Error("BASE_URL environment variable is not defined");
 
     const res = await fetch(`${baseUrl}${path}`);
     if (!res.ok) throw new Error("Failed to fetch data");
