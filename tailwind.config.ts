@@ -38,6 +38,7 @@ export default {
         45: "180px",
         34: "136px",
         "46.75": "187px",
+        100: "400px",
       },
       fontSize: {
         "3.5xl": "32px",
