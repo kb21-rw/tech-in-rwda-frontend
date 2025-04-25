@@ -18,7 +18,7 @@ const ImageCard = ({
               alt="articles"
               src={image?.url}
               fill
-              className="object-cover"
+              className="object-cover group-hover:scale-105 transition-transform duration-300"
               priority
             />
           )}
