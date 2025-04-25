@@ -1,0 +1,33 @@
+{
+  "default_branch": "dev",
+  "branches": [
+    "dev",
+    "fix/handle-entity-errors",
+    "fix/image-card-grid",
+    "ft/fix-revalidation",
+    "ft/fix-revalidation-paths",
+    "ft/revalidation",
+    "main",
+    "origin"
+  ],
+  "parent": {
+    "dev": null,
+    "fix/handle-entity-errors": "dev",
+    "fix/image-card-grid": "dev",
+    "ft/fix-revalidation": "dev",
+    "ft/fix-revalidation-paths": "ft/fix-revalidation",
+    "ft/revalidation": "dev",
+    "main": "dev",
+    "origin": "dev"
+  },
+  "order": [
+    "dev",
+    "fix/handle-entity-errors",
+    "fix/image-card-grid",
+    "ft/fix-revalidation",
+    "ft/revalidation",
+    "main",
+    "origin",
+    "ft/fix-revalidation-paths"
+  ]
+}

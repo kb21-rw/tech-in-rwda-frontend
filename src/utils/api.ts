@@ -1,4 +1,10 @@
-export const fetchEntityBySlug = async ({ path, slug }: any) => {
+export const fetchEntityBySlug = async ({
+  path,
+  slug,
+}: {
+  path: string;
+  slug?: string;
+}) => {
   try {
     const baseUrl = process.env.BASE_URL;
     if (!baseUrl)
@@ -16,7 +22,7 @@ export const fetchEntityBySlug = async ({ path, slug }: any) => {
   }
 };
 
-export const fetchEntities = async ({ path }: any) => {
+export const fetchEntities = async ({ path }: { path: string }) => {
   try {
     const baseUrl = process.env.BASE_URL;
     if (!baseUrl)
@@ -35,7 +41,13 @@ export const fetchEntities = async ({ path }: any) => {
   }
 };
 
-export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
+export const fetchEntitiesPath = async ({
+  path,
+  excluded = [],
+}: {
+  path: string;
+  excluded?: string[];
+}) => {
   try {
     const baseUrl = process.env.BASE_URL;
     if (!baseUrl)
@@ -59,7 +71,7 @@ export const fetchEntitiesPath = async ({ path, excluded = [] }: any) => {
   }
 };
 
-export const fetchSiteLinks = async (path: any) => {
+export const fetchSiteLinks = async (path: string) => {
   try {
     const baseUrl = process.env.BASE_URL;
     if (!baseUrl)

@@ -16,10 +16,6 @@ export default async function Home() {
     );
   } catch (error) {
     console.error("Error fetching data:", error);
-    return (
-      <div className="min-h-[80vh] flex items-center justify-center text-red-500">
-        Failed to load content.
-      </div>
-    );
+    notFound();
   }
 }

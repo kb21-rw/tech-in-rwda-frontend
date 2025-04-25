@@ -29,9 +29,9 @@ export default async function RootLayout({
       className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
       <body className="content-wrapper" suppressHydrationWarning={true}>
-        <Navbar {...header} />
+        {header && <Navbar {...header} />}
         {children}
-        <Footer {...footer} />
+        {footer && <Footer {...footer} />}
       </body>
     </html>
   );
