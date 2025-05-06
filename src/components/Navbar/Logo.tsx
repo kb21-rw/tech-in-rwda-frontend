@@ -27,6 +27,7 @@ export const Logo = ({ desktopLogo, mobileLogo, isOpen }: LogoProps) => {
         alt={logo.alternativeText || logo.name || "Logo"}
         width={logoSize.width}
         height={logoSize.height}
+        className="w-full"
       />
     </Link>
   );
