@@ -5,7 +5,7 @@ import RichText from "../ui/RichText";
 const TextBlock = ({ title, description, align, image }: HeaderData) => {
   return (
     <div className="flex flex-col justify-center items-center text-center py-6.75 gap-5 lg:gap-7.5">
-      {title && (
+      {(title !== undefined || title !== null) && (
         <>
           <h1
             className={`font-avenir ${
@@ -23,7 +23,7 @@ const TextBlock = ({ title, description, align, image }: HeaderData) => {
         <div className="my-8">
           <Image
             src={image.url}
-            alt={"members"}
+            alt={image.alternativeText || image.name || "members"}
             width={10000}
             height={10000}
             className="object-cover"
