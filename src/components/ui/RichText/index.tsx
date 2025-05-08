@@ -53,7 +53,7 @@ const RichText = ({ content, colored = false, aligned }: RichTextProps) => {
 
           list: ({ children, format }) => (
             <ul
-              className={`ml-6 text-left text-primary ${
+              className={`text-left text-primary ${
                 format === "ordered" ? "list-decimal" : "list-disc"
               }`}
             >

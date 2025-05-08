@@ -56,7 +56,7 @@ export const fetchEntitiesPath = async ({
     const res = await fetch(`${baseUrl}${path}`);
     const entities = await res.json();
 
-    const paths: { locale: string; params: { slug: string } }[] = [];
+    const paths: { params: { slug: string } }[] = [];
     const list = entities?.data
       ?.filter((page: any) => !excluded.includes(page.slug))
       ?.map((page: any) => ({
