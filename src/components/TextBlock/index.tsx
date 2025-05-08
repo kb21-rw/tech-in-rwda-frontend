@@ -30,7 +30,7 @@ const TextBlock = ({ title, description, align, image }: HeaderData) => {
           />
         </div>
       )}
-      <div>
+      <div className="w-full">
         {description && <RichText content={description} aligned={align} />}
       </div>
     </div>
