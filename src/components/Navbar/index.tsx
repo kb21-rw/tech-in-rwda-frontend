@@ -20,7 +20,7 @@ const Navbar = (data: NavbarData) => {
         isOpen && "fixed left-0 w-full h-full bg-white px-7.2 lg:px-0 lg:static"
       }`}
     >
-      <div className="flex flex-col lg:flex-row justify-between py-10">
+      <div className="flex flex-col lg:flex-row justify-between py-4">
         <div className="flex justify-between">
           <Logo
             desktopLogo={desktopLogo}
@@ -29,7 +29,6 @@ const Navbar = (data: NavbarData) => {
           />
           <MenuIcon isOpen={isOpen} toggle={() => toggle()} />
         </div>
-
         <MenuItems data={data} isOpen={isOpen} toggle={() => toggle()} />
       </div>
     </nav>

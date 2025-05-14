@@ -23,14 +23,14 @@ const TextBlock = ({ title, description, align, image }: HeaderData) => {
         <div className="my-8">
           <Image
             src={image.url}
-            alt={"members"}
+            alt={image.alternativeText || image.name || "members"}
             width={10000}
             height={10000}
             className="object-cover"
           />
         </div>
       )}
-      <div>
+      <div className="w-full">
         {description && <RichText content={description} aligned={align} />}
       </div>
     </div>

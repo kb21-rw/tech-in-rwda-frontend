@@ -5,7 +5,7 @@ const ImageCardBlock = ({ cards }: { cards: ImageCardData[] }) => {
   return (
     <div className="flex flex-col gap-7.5">
       {cards?.map((item: ImageCardData, index: number) => (
-        <div key={index + item.id}>
+        <div key={index + item.id} className="py-2">
           <ImageCard {...item} />
         </div>
       ))}
