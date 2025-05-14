@@ -4,14 +4,14 @@ import RichText from "../ui/RichText";
 
 const ImageCard = ({ image, title, description }: ImageCardData) => {
   return (
-    <div className="flex-col lg:flex-row flex gap-7.5 lg:gap-10">
+    <div className="grid gap-7.5 lg:grid-cols-[auto,1fr] lg:gap-10 items-center">
       {image && (
         <Image
           src={image?.url}
           alt={"members"}
           width={1000}
           height={1000}
-          className="w-full lg:w-45 h-full object-cover"
+          className="w-full lg:w-45 h-auto object-fit"
         />
       )}
       <div className="font-mulish">
