@@ -11,7 +11,7 @@ export async function POST(request: NextRequest) {
 
     const timestamp = new Date().toISOString();
 
-    const paths = ["/[slug]", "/project/[slug]"];
+    const paths = ["/", "/[slug]", "/project/[slug]"];
     for (const path of paths) {
       revalidatePath(path, "page");
     }
