@@ -20,7 +20,7 @@ export async function POST(request: NextRequest) {
       "layout",
     ];
     for (const path of paths) {
-      revalidatePath(path);
+      revalidatePath(path, "page");
     }
 
     return NextResponse.json({
