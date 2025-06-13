@@ -11,12 +11,8 @@ export async function POST(request: NextRequest) {
 
     const timestamp = new Date().toISOString();
 
-    const staticPaths = ["/", "/partners", "/projects"];
-    for (const path of staticPaths) {
-      revalidatePath(path);
-    }
-    const dynamicPaths = ["/project/[slug]"];
-    for (const path of dynamicPaths) {
+    const paths = ["/[slug]", "/project/[slug]"];
+    for (const path of paths) {
       revalidatePath(path, "page");
     }
 
@@ -24,7 +20,7 @@ export async function POST(request: NextRequest) {
       revalidated: true,
       message: "Paths revalidated successfully",
       timestamp,
-      paths: [...staticPaths, ...dynamicPaths],
+      paths,
     });
   } catch (err) {
     const timestamp = new Date().toISOString();
