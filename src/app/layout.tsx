@@ -4,30 +4,24 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import getAllPageLinks from "./api/siteConfig";
 
-export async function generateMetadata() {
-  const { data } = await getAllPageLinks();
-  const faviconUrl = data.favicon?.[0]?.url;
-
-  return {
-    icons: {
-      icon: faviconUrl,
-    },
-  };
-}
-
 export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   const { data } = await getAllPageLinks();
-  const { footer, header } = data;
-
+  const { footer, header, favicon } = data;
   return (
     <html
       lang="en"
       className={`${avenir.className} ${comfortaa.variable} ${mulish.variable} ${arvo.variable} ${roboto.variable} antialiased`}
     >
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        {favicon && favicon.length > 0 && (
+          <link rel="icon" href={favicon[0]?.url} />
+        )}
+      </head>
       <body className="content-wrapper" suppressHydrationWarning={true}>
         {header && <Navbar {...header} />}
         {children}
