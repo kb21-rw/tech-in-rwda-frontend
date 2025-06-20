@@ -7,7 +7,7 @@ const TextGrid = ({ listItem }: List) => {
         listItem &&
         listItem[0]?.hasBulletPoints &&
         "custom-list text-base lg:text-lg "
-      } grid md:grid-cols-2 gap-x-20 gap-y-7.5 px-0 lg:px-43.75 lg:gap-y-11.25`}
+      } grid md:grid-cols-2 gap-x-20 gap-y-7.5 px-0 lg:gap-y-11.25`}
     >
       {listItem &&
         listItem?.map((item: ListItem, index: number) => (
